@@ -1,0 +1,250 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* For WebKit-based browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgb(99 102 241), rgb(6 182 212));
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, rgb(79 70 229), rgb(8 145 178));
+}
+
+::-webkit-scrollbar-track {
+  background-color: hsl(var(--background));
+  border-radius: 999px;
+}
+
+/* For Firefox */
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: rgb(99 102 241) hsl(var(--background));
+  scrollbar-width: thin; /* Can be 'auto', 'thin', or 'none' */
+}
+
+@layer base {
+  :root {
+    --background: 40 18% 94%;
+    --foreground: 220 25% 12%;
+    --card: 42 24% 96%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 38 16% 89%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 38 14% 89%;
+    --muted-foreground: 220 9% 42%;
+    --accent: 232 22% 91%;
+    --accent-foreground: 230 45% 18%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 36 12% 74%;
+    --input: 36 12% 78%;
+    --ring: 239 84% 67%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.875rem;
+    --glow-primary: 99 102 241;
+    --glow-secondary: 6 182 212;
+    --skeuo-surface: 237 233 223;
+    --skeuo-high: 255 253 247;
+    --skeuo-low: 190 185 174;
+    --skeuo-edge: 165 160 150;
+    --skeuo-shadow: 44 50 62;
+  }
+  .dark {
+    --background: 220 25% 6%;
+    --foreground: 210 40% 98%;
+    --card: 218 20% 10%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 33% 7%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 217 18% 14%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 17% 14%;
+    --muted-foreground: 215 20% 68%;
+    --accent: 230 28% 15%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 217 15% 25%;
+    --input: 217 15% 22%;
+    --ring: 239 84% 70%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --glow-primary: 129 140 248;
+    --glow-secondary: 34 211 238;
+    --skeuo-surface: 20 26 36;
+    --skeuo-high: 48 57 72;
+    --skeuo-low: 3 6 11;
+    --skeuo-edge: 66 76 91;
+    --skeuo-shadow: 0 0 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image:
+      radial-gradient(circle at 15% 0%, rgb(var(--glow-primary) / 0.055), transparent 34rem),
+      radial-gradient(circle at 90% 35%, rgb(var(--glow-secondary) / 0.04), transparent 36rem),
+      repeating-linear-gradient(115deg, transparent 0 6px, rgb(var(--skeuo-shadow) / 0.018) 7px);
+    background-attachment: fixed;
+  }
+  ::selection {
+    @apply bg-indigo-500/30 text-foreground;
+  }
+}
+
+@layer utilities {
+  .skeuo-panel {
+    border: 1px solid rgb(var(--skeuo-edge) / 0.72);
+    background: linear-gradient(145deg, rgb(var(--skeuo-high) / 0.72), rgb(var(--skeuo-surface) / 0.96) 48%, rgb(var(--skeuo-low) / 0.28));
+    box-shadow:
+      inset 0 1px 0 rgb(var(--skeuo-high) / 0.88),
+      inset 0 -1px 0 rgb(var(--skeuo-low) / 0.52),
+      10px 12px 24px rgb(var(--skeuo-shadow) / 0.18),
+      -7px -7px 18px rgb(var(--skeuo-high) / 0.42);
+  }
+
+  .dark .skeuo-panel {
+    box-shadow:
+      inset 0 1px 0 rgb(var(--skeuo-high) / 0.55),
+      inset 0 -1px 0 rgb(var(--skeuo-low) / 0.9),
+      12px 14px 30px rgb(0 0 0 / 0.48),
+      -5px -5px 18px rgb(var(--skeuo-high) / 0.08);
+  }
+
+  .skeuo-inset {
+    border: 1px solid rgb(var(--skeuo-edge) / 0.68);
+    background: linear-gradient(145deg, rgb(var(--skeuo-low) / 0.22), rgb(var(--skeuo-surface) / 0.78));
+    box-shadow:
+      inset 5px 6px 13px rgb(var(--skeuo-shadow) / 0.18),
+      inset -4px -4px 10px rgb(var(--skeuo-high) / 0.58),
+      0 1px 0 rgb(var(--skeuo-high) / 0.66);
+  }
+
+  .dark .skeuo-inset {
+    box-shadow:
+      inset 6px 7px 16px rgb(0 0 0 / 0.56),
+      inset -4px -4px 11px rgb(var(--skeuo-high) / 0.1),
+      0 1px 0 rgb(var(--skeuo-high) / 0.2);
+  }
+
+  .skeuo-control {
+    border: 1px solid rgb(var(--skeuo-edge) / 0.78);
+    box-shadow:
+      inset 0 1px 0 rgb(var(--skeuo-high) / 0.72),
+      inset 0 -1px 0 rgb(var(--skeuo-low) / 0.45),
+      3px 4px 8px rgb(var(--skeuo-shadow) / 0.18),
+      -2px -2px 6px rgb(var(--skeuo-high) / 0.42);
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  }
+
+  .dark .skeuo-control {
+    box-shadow:
+      inset 0 1px 0 rgb(var(--skeuo-high) / 0.36),
+      inset 0 -1px 0 rgb(0 0 0 / 0.7),
+      4px 5px 10px rgb(0 0 0 / 0.5),
+      -2px -2px 7px rgb(var(--skeuo-high) / 0.07);
+  }
+
+  .skeuo-control:hover {
+    transform: translateY(-1px);
+  }
+
+  .skeuo-control:active,
+  .skeuo-control[data-state="open"] {
+    transform: translateY(2px);
+    box-shadow:
+      inset 4px 5px 10px rgb(var(--skeuo-shadow) / 0.22),
+      inset -2px -2px 6px rgb(var(--skeuo-high) / 0.34);
+  }
+
+  .dark .skeuo-control:active,
+  .dark .skeuo-control[data-state="open"] {
+    box-shadow:
+      inset 5px 6px 12px rgb(0 0 0 / 0.65),
+      inset -2px -2px 6px rgb(var(--skeuo-high) / 0.08);
+  }
+
+  .skeuo-screen {
+    border: 3px solid rgb(var(--skeuo-edge) / 0.82);
+    box-shadow:
+      inset 0 0 0 1px rgb(var(--skeuo-high) / 0.55),
+      inset 0 0 28px rgb(0 0 0 / 0.42),
+      0 1px 0 rgb(var(--skeuo-high) / 0.78),
+      5px 7px 16px rgb(var(--skeuo-shadow) / 0.2);
+  }
+
+  .skeuo-screws::before,
+  .skeuo-screws::after {
+    content: "";
+    position: absolute;
+    top: 0.62rem;
+    z-index: 30;
+    width: 0.48rem;
+    height: 0.48rem;
+    border: 1px solid rgb(var(--skeuo-edge) / 0.8);
+    border-radius: 999px;
+    background: radial-gradient(circle at 35% 30%, rgb(var(--skeuo-high)), rgb(var(--skeuo-low)) 68%);
+    box-shadow: inset 0 0 2px rgb(0 0 0 / 0.45), 0 1px 2px rgb(var(--skeuo-shadow) / 0.35);
+  }
+
+  .skeuo-screws::before { left: 0.68rem; }
+  .skeuo-screws::after { right: 0.68rem; }
+
+  .skeuo-engraved {
+    color: hsl(var(--muted-foreground));
+    text-shadow: 0 1px 0 rgb(var(--skeuo-high) / 0.55);
+  }
+
+  .aceternity-grid {
+    background-image:
+      linear-gradient(to right, rgb(var(--glow-primary) / 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(var(--glow-primary) / 0.08) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

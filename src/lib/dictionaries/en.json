@@ -1,0 +1,76 @@
+{
+  "hello": "Hello",
+  "common": {
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "blogs": "Blogs",
+      "contact": "Contact",
+      "label": "Primary navigation",
+      "open": "Open navigation menu",
+      "close": "Close navigation menu",
+      "description": "Choose a page from the portfolio navigation."
+    },
+    "actions": { "myProjects": "My Projects", "readMore": "Read more" },
+    "controls": { "selectLanguage": "Select language", "toggleTheme": "Toggle between light and dark mode" },
+    "languages": { "english": "English", "thai": "Thai", "myanmar": "Myanmar", "japanese": "Japanese", "arabic": "Arabic" },
+    "footer": { "rights": "All rights reserved.", "builtWith": "Built with", "hostedWith": "Hosted with", "sourceAt": "Source code on" }
+  },
+  "home": {
+    "mainTitleDesc": {
+      "title": "Turning Ideas into Reality",
+      "desc": "I design and build user-friendly, responsive web applications using modern technologies like React, Next.js, and more",
+      "subdesc": "Inspired by others, I share my open-source derived work with the community."
+    },
+    "introduction": {
+      "eyebrow": "Introduction",
+      "title": "Building consistent, expressive interfaces.",
+      "paragraphs": [
+        "Hey, I’m Zaw Zaw Myint (Zack), a Frontend Developer based in Thailand. I’ve worked in web development for over four years, mainly focusing on frontend development with React.js.",
+        "I specialize in crafting interactive and visually appealing interfaces using React.js, Next.js, and TypeScript. My journey has given me strong experience in UI/UX design, state management, and modern JavaScript frameworks.",
+        "In my free time, I enjoy personal projects, creative design experiments, and learning tools that expand my development stack. Away from coding, I explore AI technologies, web animation, and galaxy-themed design concepts."
+      ],
+      "currentBefore": "Currently at",
+      "currentAfter": "I work on an image-classification project for real-estate construction using Amazon Rekognition, creating scalable AWS solutions and datasets for custom models.",
+      "closingBefore": "I’m passionate about continuous learning and open to exciting collaborations. Explore my work on",
+      "closingMiddle": "or",
+      "closingContact": "get in touch",
+      "closingAfter": "and let’s create something meaningful together.",
+      "carouselLabel": "Life beyond the screen",
+      "imageAlts": ["Zack at Mou Lake", "Zack exploring a city", "Zack outdoors", "A view across Inle Lake", "Zack on a trip", "Landscape at Myitkyina Lake"]
+    }
+  },
+  "about": {
+    "mainTitleDesc": { "title": "Who I am and what I use", "desc": "With expertise in React.js and Next.js, I thrive on turning complex ideas into seamless digital experiences." },
+    "sections": { "languages": "Languages", "frontend": "Frontend Development", "backend": "Backend Development", "authentication": "Authentication", "others": "Others", "career": "Career", "experiences": "Work experience", "fullTime": "Full time" },
+    "levels": { "advanced": "Advanced", "intermediate": "Intermediate", "basic": "Basic", "mobile": "Mobile", "auth": "Authentication", "containerization": "Containerization" }
+  },
+  "projects": {
+    "mainTitleDesc": { "title": "Projects I've realized", "desc": "Explore some of the projects I worked on in the past." },
+    "sourceLabel": "View {name} source on GitHub",
+    "demoLabel": "Open {name} live demo",
+    "previewLabel": "{name} project preview",
+    "descriptions": {
+      "Online Courses": "A friendly online-learning platform with courses for frontend, backend, and broader technology skills.",
+      "Shop": "An elegant online shop with smooth product discovery and a simple, secure checkout experience.",
+      "Movies": "A clean movie-discovery experience for browsing genres and learning more about favorite titles.",
+      "Todos": "A focused task manager for adding, tracking, and completing everyday work efficiently.",
+      "Chat app": "A responsive real-time chat application designed for effortless conversations anywhere.",
+      "Customer Service": "A streamlined support platform for managing inquiries and responding to customers efficiently."
+    }
+  },
+  "blogs": {
+    "mainTitleDesc": { "title": "My Journey in Tech and Beyond", "desc": "A collection of blogs sharing insights on technology and the personal side of my developer journey." },
+    "coverLabel": "Cover image for {title}"
+  },
+  "contact": {
+    "mainTitleDesc": { "title": "Reach Out and Say Hello!", "desc": "Interested in working together? Send me a message, and let’s make it happen!" },
+    "eyebrow": "Let’s work together",
+    "title": "Contact information",
+    "birthday": "April 1997",
+    "resume": "Resume",
+    "location": "Bangkok, Thailand",
+    "mapLabel": "Map showing Bangkok, Thailand"
+  }
+}
