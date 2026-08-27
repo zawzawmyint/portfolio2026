@@ -17,11 +17,12 @@ const IntroductionDesc = ({
       <p>
         {dictionary.currentBefore}{" "}
         <Link
-          href={"https://sou-bu.co.jp/"}
+          href={"https://www.mhmarkets.com/"}
           target="_blank"
+          rel="noreferrer"
           className="font-medium text-foreground underline decoration-indigo-400 underline-offset-4"
         >
-          Soubu
+          MH Markets
         </Link>
         {" "}{dictionary.currentAfter}
       </p>

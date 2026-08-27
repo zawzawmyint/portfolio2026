@@ -5,20 +5,20 @@
     "actions": { "myProjects": "プロジェクトを見る", "readMore": "続きを読む" },
     "controls": { "selectLanguage": "言語を選択", "toggleTheme": "ライトモードとダークモードを切り替える" },
     "languages": { "english": "英語", "thai": "タイ語", "myanmar": "ミャンマー語", "japanese": "日本語", "arabic": "アラビア語" },
-    "footer": { "rights": "無断転載を禁じます。", "builtWith": "使用技術", "hostedWith": "ホスティング", "sourceAt": "ソースコード" }
+    "footer": { "tagline": "信頼性とアクセシビリティを大切に、丁寧にデジタルプロダクトを構築するソフトウェア開発者です。", "location": "UAE・ドバイ在住", "rights": "無断転載を禁じます。", "builtWith": "使用技術", "hostedWith": "ホスティング", "sourceAt": "ソースコード" }
   },
   "home": {
     "mainTitleDesc": { "title": "アイデアを現実にする", "desc": "ReactやNext.jsなどの最新技術を使用して、ユーザーフレンドリーでレスポンシブなWebアプリケーションを設計・構築します。", "subdesc": "他の人々からインスピレーションを受け、オープンソースで派生した作品をコミュニティと共有しています。" },
     "introduction": {
       "eyebrow": "自己紹介",
-      "title": "一貫性と表現力を備えたインターフェースを構築します。",
+      "title": "信頼性が高く、人を中心に考えたデジタルプロダクトを構築します。",
       "paragraphs": [
-        "はじめまして、Zaw Zaw Myint（Zack）です。タイを拠点に活動するフロントエンド開発者で、4年以上にわたりReact.jsを中心としたWeb開発に携わっています。",
-        "React.js、Next.js、TypeScriptを使用した、インタラクティブで美しいインターフェースの制作を得意としています。UI/UX、状態管理、最新のJavaScriptフレームワークにも豊富な経験があります。",
-        "自由な時間には個人プロジェクトやデザイン実験、新しいツールの学習を楽しんでいます。AI技術、Webアニメーション、宇宙をテーマにしたデザインにも関心があります。"
+        "はじめまして、Zaw Zaw Myint（Zack）です。UAE・ドバイを拠点に活動するソフトウェア開発者で、5年以上にわたりフロントエンドおよびフルスタックのWeb開発に携わっています。",
+        "React、Next.js、TypeScript、Nuxtに加え、StrapiやPayloadなどのCMSを活用し、複雑な要件をアクセシブルでレスポンシブ、かつ保守しやすいプロダクトへと形にします。",
+        "クリーンな設計、パフォーマンス、多言語対応、丁寧なインタラクション設計を大切にしています。エンジニアとしての判断を中心に据えながら、エージェント型コーディングツールで調査、テスト、開発を効率化しています。"
       ],
       "currentBefore": "現在は",
-      "currentAfter": "Amazon Rekognitionを活用した不動産建設向け画像分類プロジェクトに取り組み、スケーラブルなAWSソリューションとカスタムモデル用データセットを構築しています。",
+      "currentAfter": "MH MarketsとNEEXの金融・トレーディングプラットフォーム向けに、多言語Web体験とCMS連携機能を開発しています。",
       "closingBefore": "継続的な学習を大切にし、新しいコラボレーションを歓迎しています。作品は",
       "closingMiddle": "でご覧いただくか、",
       "closingContact": "お気軽にご連絡ください",
@@ -47,6 +47,6 @@
   "blogs": { "mainTitleDesc": { "title": "テクノロジーとその先の私の旅", "desc": "テクノロジーに関する洞察や、開発者としての旅の個人的な側面を共有するブログのコレクションです。" }, "coverLabel": "{title}のカバー画像" },
   "contact": {
     "mainTitleDesc": { "title": "お気軽にご連絡ください！", "desc": "一緒に仕事をしたいですか？メッセージを送ってください、そして実現させましょう！" },
-    "eyebrow": "一緒に仕事をしましょう", "title": "連絡先", "birthday": "1997年4月", "resume": "履歴書", "location": "タイ・バンコク", "mapLabel": "タイ・バンコクの地図"
+    "eyebrow": "一緒に仕事をしましょう", "title": "連絡先", "birthday": "1997年4月", "resume": "履歴書", "location": "UAE・ドバイ", "mapLabel": "UAE・ドバイの地図"
   }
 }

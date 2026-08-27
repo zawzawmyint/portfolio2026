@@ -22,7 +22,7 @@ const ExperienceCard = ({ experience, fullTimeLabel }: { experience: WorkExperie
                 target="_blank"
                 rel="noreferrer"
               >
-                {experience.company} · {fullTimeLabel}
+                {experience.company} · {fullTimeLabel} · {experience.location}
               </Link>
             </p>
           </div>

@@ -5,20 +5,20 @@
     "actions": { "myProjects": "ကျွန်ုပ်၏ ပရောဂျက်များ", "readMore": "ဆက်ဖတ်ရန်" },
     "controls": { "selectLanguage": "ဘာသာစကား ရွေးရန်", "toggleTheme": "အလင်းနှင့် အမှောင်မုဒ် ပြောင်းရန်" },
     "languages": { "english": "အင်္ဂလိပ်", "thai": "ထိုင်း", "myanmar": "မြန်မာ", "japanese": "ဂျပန်", "arabic": "အာရဗီ" },
-    "footer": { "rights": "မူပိုင်ခွင့်အားလုံး ရယူထားသည်။", "builtWith": "တည်ဆောက်ထားသည်", "hostedWith": "လွှင့်တင်ထားသည်", "sourceAt": "Source code ကို" }
+    "footer": { "tagline": "ယုံကြည်စိတ်ချရပြီး အသုံးပြုရလွယ်ကူသော digital product များကို စနစ်တကျ တည်ဆောက်သည့် Software Developer ဖြစ်ပါသည်။", "location": "ဒူဘိုင်း၊ UAE တွင် နေထိုင်သည်", "rights": "မူပိုင်ခွင့်အားလုံး ရယူထားသည်။", "builtWith": "တည်ဆောက်ထားသည်", "hostedWith": "လွှင့်တင်ထားသည်", "sourceAt": "Source code ကို" }
   },
   "home": {
     "mainTitleDesc": { "title": "စိတ်ကူးများကို အဖြစ်အပျက်အဖြစ် ပြောင်းလဲခြင်း", "desc": "ကျွန်ုပ်သည် React၊ Next.js စသည့် နောက်ဆုံးပေါ်နည်းပညာများဖြင့် အသုံးပြုရလွယ်ကူပြီး တုံ့ပြန်မှုမြန်သော ဝက်ဘ်အက်ပလီကေးရှင်းများကို ဒီဇိုင်းဆွဲပြီး တည်ဆောက်ပါသည်", "subdesc": "အခြားသူများမှ သင်ကြားရသောအရာများကို အခြေခံပြီး ကျွန်ုပ်၏ open-source အလုပ်များကို community နှင့် မျှဝေပါသည်။" },
     "introduction": {
       "eyebrow": "မိတ်ဆက်",
-      "title": "တသမတ်တည်းရှိပြီး ထင်ရှားသော interface များကို တည်ဆောက်ခြင်း။",
+      "title": "ယုံကြည်စိတ်ချရပြီး လူကိုအခြေခံသော digital product များ တည်ဆောက်ခြင်း။",
       "paragraphs": [
-        "မင်္ဂလာပါ၊ ကျွန်ုပ်က Zaw Zaw Myint (Zack) ဖြစ်ပြီး ထိုင်းနိုင်ငံတွင် နေထိုင်သော Frontend Developer တစ်ဦးဖြစ်ပါသည်။ Web development ကို လေးနှစ်ကျော် လုပ်ကိုင်ခဲ့ပြီး React.js ဖြင့် Frontend development ကို အဓိကထားပါသည်။",
-        "React.js၊ Next.js နှင့် TypeScript တို့ဖြင့် အသုံးပြုရလွယ်ကူပြီး လှပသော interface များ ဖန်တီးရာတွင် ကျွမ်းကျင်ပါသည်။ UI/UX၊ state management နှင့် ခေတ်မီ JavaScript framework များတွင် အတွေ့အကြုံရှိပါသည်။",
-        "အားလပ်ချိန်တွင် ကိုယ်ပိုင်ပရောဂျက်များ၊ ဖန်တီးမှုဒီဇိုင်းစမ်းသပ်မှုများနှင့် ကိရိယာအသစ်များကို လေ့လာပါသည်။ AI နည်းပညာ၊ web animation နှင့် galaxy-themed design များကိုလည်း စိတ်ဝင်စားပါသည်။"
+        "မင်္ဂလာပါ၊ ကျွန်ုပ်က Zaw Zaw Myint (Zack) ဖြစ်ပြီး UAE နိုင်ငံ၊ ဒူဘိုင်းမြို့တွင် နေထိုင်သော Software Developer တစ်ဦးဖြစ်ပါသည်။ Frontend နှင့် Full-stack web development ကို ငါးနှစ်ကျော် လုပ်ကိုင်ခဲ့ပါသည်။",
+        "React၊ Next.js၊ TypeScript၊ Nuxt နှင့် Strapi၊ Payload ကဲ့သို့သော CMS platform များကို အသုံးပြုပြီး ရှုပ်ထွေးသော လိုအပ်ချက်များကို အသုံးပြုရလွယ်ကူ၊ responsive ဖြစ်ပြီး ထိန်းသိမ်းရလွယ်သော product များအဖြစ် ဖန်တီးပါသည်။",
+        "သန့်ရှင်းသော architecture၊ performance၊ localization နှင့် စနစ်တကျ interaction design တို့ကို အလေးထားပါသည်။ Engineering ဆုံးဖြတ်ချက်ကို အဓိကထားလျက် research၊ testing နှင့် delivery ကို မြန်ဆန်စေရန် agentic coding tool များကိုလည်း အသုံးပြုပါသည်။"
       ],
       "currentBefore": "လက်ရှိ",
-      "currentAfter": "တွင် Amazon Rekognition အသုံးပြုသော အိမ်ခြံမြေဆောက်လုပ်ရေးပုံရိပ်ခွဲခြားရေးပရောဂျက်၊ ချဲ့ထွင်နိုင်သော AWS solution နှင့် custom model dataset များကို တည်ဆောက်နေပါသည်။",
+      "currentAfter": "တွင် MH Markets နှင့် NEEX ဘဏ္ဍာရေးနှင့် trading platform များအတွက် ဘာသာစကားမျိုးစုံသုံး web experience နှင့် CMS feature များကို တည်ဆောက်နေပါသည်။",
       "closingBefore": "အမြဲတမ်းလေ့လာသင်ယူခြင်းကို နှစ်သက်ပြီး ပူးပေါင်းဆောင်ရွက်မှုအသစ်များကို ကြိုဆိုပါသည်။ ကျွန်ုပ်၏အလုပ်များကို",
       "closingMiddle": "တွင်ကြည့်ရှုနိုင်သလို",
       "closingContact": "ဆက်သွယ်နိုင်ပါသည်",
@@ -47,6 +47,6 @@
   "blogs": { "mainTitleDesc": { "title": "နည်းပညာနှင့် ကျွန်ုပ်၏ ခရီးစဉ်", "desc": "နည်းပညာနှင့် ကျွန်ုပ်၏ developer ခရီးစဉ်အကြောင်းကို မျှဝေသည့် ဘလော့များစုစည်းမှု" }, "coverLabel": "{title} အတွက် မျက်နှာဖုံးပုံ" },
   "contact": {
     "mainTitleDesc": { "title": "ဆက်သွယ်ရန်နှင့် မင်္ဂလာပါပြောပါ!", "desc": "အတူလုပ်ဆောင်လိုပါသလား? ကျွန်ုပ်အား မက်ဆေ့ခ်ျပို့ပါ၊ ပြီးတော့ အတူတကွ အောင်မြင်အောင်လုပ်ကြမယ်!" },
-    "eyebrow": "အတူလုပ်ကိုင်ကြပါစို့", "title": "ဆက်သွယ်ရန်အချက်အလက်", "birthday": "ဧပြီ 1997", "resume": "ကိုယ်ရေးရာဇဝင်", "location": "ဘန်ကောက်၊ ထိုင်းနိုင်ငံ", "mapLabel": "ဘန်ကောက်၊ ထိုင်းနိုင်ငံ မြေပုံ"
+    "eyebrow": "အတူလုပ်ကိုင်ကြပါစို့", "title": "ဆက်သွယ်ရန်အချက်အလက်", "birthday": "ဧပြီ 1997", "resume": "ကိုယ်ရေးရာဇဝင်", "location": "ဒူဘိုင်း၊ UAE", "mapLabel": "ဒူဘိုင်း၊ UAE မြေပုံ"
   }
 }

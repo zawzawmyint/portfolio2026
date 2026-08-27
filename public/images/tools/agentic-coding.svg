@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <title>Agentic coding tools</title>
+  <rect x="4" y="7" width="56" height="50" rx="12" fill="#111827"/>
+  <path d="M18 22L27 32L18 42" stroke="#67E8F9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M33 42H47" stroke="#A78BFA" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="49" cy="18" r="5" fill="#D81618"/>
+</svg>

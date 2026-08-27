@@ -15,7 +15,7 @@
     "actions": { "myProjects": "My Projects", "readMore": "Read more" },
     "controls": { "selectLanguage": "Select language", "toggleTheme": "Toggle between light and dark mode" },
     "languages": { "english": "English", "thai": "Thai", "myanmar": "Myanmar", "japanese": "Japanese", "arabic": "Arabic" },
-    "footer": { "rights": "All rights reserved.", "builtWith": "Built with", "hostedWith": "Hosted with", "sourceAt": "Source code on" }
+    "footer": { "tagline": "Software Developer building reliable, accessible, and thoughtfully crafted digital products.", "location": "Based in Dubai, UAE", "rights": "All rights reserved.", "builtWith": "Built with", "hostedWith": "Hosted with", "sourceAt": "Source code on" }
   },
   "home": {
     "mainTitleDesc": {
@@ -25,14 +25,14 @@
     },
     "introduction": {
       "eyebrow": "Introduction",
-      "title": "Building consistent, expressive interfaces.",
+      "title": "Building reliable, human-centered digital products.",
       "paragraphs": [
-        "Hey, I’m Zaw Zaw Myint (Zack), a Frontend Developer based in Thailand. I’ve worked in web development for over four years, mainly focusing on frontend development with React.js.",
-        "I specialize in crafting interactive and visually appealing interfaces using React.js, Next.js, and TypeScript. My journey has given me strong experience in UI/UX design, state management, and modern JavaScript frameworks.",
-        "In my free time, I enjoy personal projects, creative design experiments, and learning tools that expand my development stack. Away from coding, I explore AI technologies, web animation, and galaxy-themed design concepts."
+        "Hey, I’m Zaw Zaw Myint (Zack), a Software Developer based in Dubai, UAE. I’ve worked in web development for over five years, building modern frontend and full-stack web experiences.",
+        "I work across React, Next.js, TypeScript, Nuxt, and CMS platforms such as Strapi and Payload, turning complex requirements into accessible, responsive, and maintainable products.",
+        "I care about clean architecture, performance, localization, and thoughtful interaction design. I also use agentic coding tools to accelerate research, testing, and delivery while keeping engineering judgment at the center."
       ],
       "currentBefore": "Currently at",
-      "currentAfter": "I work on an image-classification project for real-estate construction using Amazon Rekognition, creating scalable AWS solutions and datasets for custom models.",
+      "currentAfter": "I build multilingual web experiences and CMS-powered features for the MH Markets and NEEX financial trading platforms.",
       "closingBefore": "I’m passionate about continuous learning and open to exciting collaborations. Explore my work on",
       "closingMiddle": "or",
       "closingContact": "get in touch",
@@ -70,7 +70,7 @@
     "title": "Contact information",
     "birthday": "April 1997",
     "resume": "Resume",
-    "location": "Bangkok, Thailand",
-    "mapLabel": "Map showing Bangkok, Thailand"
+    "location": "Dubai, UAE",
+    "mapLabel": "Map showing Dubai, UAE"
   }
 }

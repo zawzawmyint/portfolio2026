@@ -18,6 +18,7 @@ export type WorkExperience = {
   company: string;
   company_link: string;
   companyImage: string;
+  location: string;
   project: string;
   skills: string;
   period: string;
