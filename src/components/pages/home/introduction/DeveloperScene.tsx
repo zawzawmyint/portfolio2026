@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Box, Rotate3D } from "lucide-react";
 import { useReducedMotion } from "motion/react";
 import * as React from "react";
+import { useHasFinePointer } from "@/components/global/robot-companion/robot-preference";
 import type { Dictionary } from "@/lib/dictionaries/types";
 
 const MODEL_PATH = "/models/cute-flying-robot.glb";
@@ -20,6 +21,9 @@ type ModelViewerElement = HTMLElement & {
 };
 
 const ModelViewer = "model-viewer" as React.ElementType;
+const subscribeToClientReady = () => () => undefined;
+const getClientReadySnapshot = () => true;
+const getServerReadySnapshot = () => false;
 
 const supportsWebGl = () => {
   const canvas = document.createElement("canvas");
@@ -37,6 +41,14 @@ export function DeveloperScene({ dictionary }: { dictionary: SceneDictionary }) 
   const pointerPositionRef = React.useRef({ x: 0, y: 0 });
   const isDraggingRef = React.useRef(false);
   const reduceMotion = useReducedMotion();
+  const hasFinePointer = useHasFinePointer();
+  const pointerCapabilityReady = React.useSyncExternalStore(
+    subscribeToClientReady,
+    getClientReadySnapshot,
+    getServerReadySnapshot,
+  );
+  const [mobileActivated, setMobileActivated] = React.useState(false);
+  const [documentVisible, setDocumentVisible] = React.useState(true);
   const [shouldLoad, setShouldLoad] = React.useState(false);
   const [isVisible, setIsVisible] = React.useState(false);
   const [moduleReady, setModuleReady] = React.useState(false);
@@ -45,12 +57,22 @@ export function DeveloperScene({ dictionary }: { dictionary: SceneDictionary }) 
   const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
+    const handleVisibilityChange = () => {
+      setDocumentVisible(document.visibilityState === "visible");
+    };
+
+    handleVisibilityChange();
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
+  }, []);
+
+  React.useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
     const preloadObserver = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        if (hasFinePointer && entry.isIntersecting) {
           setShouldLoad(true);
           preloadObserver.disconnect();
         }
@@ -69,7 +91,7 @@ export function DeveloperScene({ dictionary }: { dictionary: SceneDictionary }) 
       preloadObserver.disconnect();
       visibilityObserver.disconnect();
     };
-  }, []);
+  }, [hasFinePointer]);
 
   React.useEffect(() => {
     if (!shouldLoad) return;
@@ -122,12 +144,12 @@ export function DeveloperScene({ dictionary }: { dictionary: SceneDictionary }) 
     const viewer = viewerRef.current;
     if (!viewer || !isLoaded) return;
 
-    if (isVisible && !reduceMotion) {
+    if (isVisible && documentVisible && hasFinePointer && !reduceMotion) {
       viewer.play?.();
     } else {
       viewer.pause?.();
     }
-  }, [isLoaded, isVisible, reduceMotion]);
+  }, [documentVisible, hasFinePointer, isLoaded, isVisible, reduceMotion]);
 
   React.useEffect(() => {
     const layer = motionLayerRef.current;
@@ -135,7 +157,14 @@ export function DeveloperScene({ dictionary }: { dictionary: SceneDictionary }) 
       "(hover: hover) and (pointer: fine)",
     ).matches;
 
-    if (!layer || !isLoaded || !isVisible || reduceMotion || !supportsPointerFollow) {
+    if (
+      !layer ||
+      !isLoaded ||
+      !isVisible ||
+      !documentVisible ||
+      reduceMotion ||
+      !supportsPointerFollow
+    ) {
       pointerTargetRef.current = { x: 0, y: 0 };
       pointerPositionRef.current = { x: 0, y: 0 };
       if (layer) layer.style.transform = "";
@@ -157,7 +186,7 @@ export function DeveloperScene({ dictionary }: { dictionary: SceneDictionary }) 
       window.cancelAnimationFrame(animationFrame);
       layer.style.transform = "";
     };
-  }, [isLoaded, isVisible, reduceMotion]);
+  }, [documentVisible, isLoaded, isVisible, reduceMotion]);
 
   const resetPointerTarget = () => {
     pointerTargetRef.current = { x: 0, y: 0 };
@@ -181,6 +210,10 @@ export function DeveloperScene({ dictionary }: { dictionary: SceneDictionary }) 
   };
 
   const loadingPercent = Math.round(progress * 100);
+  const shouldAnimate =
+    hasFinePointer && isVisible && documentVisible && !reduceMotion;
+  const showMobileActivation =
+    pointerCapabilityReady && !hasFinePointer && !mobileActivated;
   const modelSource =
     typeof window === "undefined"
       ? MODEL_PATH
@@ -233,8 +266,8 @@ export function DeveloperScene({ dictionary }: { dictionary: SceneDictionary }) 
             alt={dictionary.label}
             camera-controls
             disable-zoom
-            autoplay={!reduceMotion}
-            auto-rotate={isVisible && !reduceMotion}
+            autoplay={shouldAnimate}
+            auto-rotate={shouldAnimate}
             auto-rotate-delay="900"
             rotation-per-second="7deg"
             interaction-prompt="auto"
@@ -251,6 +284,21 @@ export function DeveloperScene({ dictionary }: { dictionary: SceneDictionary }) 
             tabIndex={0}
           />
         </div>
+      )}
+
+      {showMobileActivation && (
+        <button
+          type="button"
+          onClick={() => {
+            setMobileActivated(true);
+            setShouldLoad(true);
+          }}
+          className="absolute left-1/2 top-1/2 z-20 inline-flex min-h-11 -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-full border border-white/20 bg-slate-950/80 px-5 py-3 text-sm font-semibold text-white shadow-2xl shadow-cyan-950/30 backdrop-blur-md transition-colors hover:bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+          aria-label={dictionary.view3d}
+        >
+          <Box className="size-4 text-cyan-300" aria-hidden="true" />
+          {dictionary.view3d}
+        </button>
       )}
 
       <div className="pointer-events-none absolute inset-x-4 top-4 z-20 flex items-center justify-between gap-3">

@@ -7,7 +7,7 @@ const Projects = ({ dictionary }: { dictionary: Dictionary["projects"] }) => {
     <div
       id="projects-grid"
       data-robot-guide="projectsGallery"
-      className="grid grid-cols-1 gap-6 md:grid-cols-2"
+      className="space-y-8"
     >
       {db.projects.map((proj, i) => {
         const description = dictionary.descriptions[
@@ -19,6 +19,7 @@ const Projects = ({ dictionary }: { dictionary: Dictionary["projects"] }) => {
             key={i + proj.name}
             project={{ ...proj, description }}
             labels={dictionary}
+            index={i}
           />
         );
       })}

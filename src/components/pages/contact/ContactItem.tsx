@@ -32,7 +32,7 @@ const ContactItem = ({ contact }: { contact: Contact }) => {
       href={contact.linkto}
       target={external ? "_blank" : undefined}
       rel={external ? "noreferrer" : undefined}
-      className="skeuo-inset group flex min-h-14 items-center gap-4 rounded-2xl px-4 py-3 transition duration-300 hover:translate-x-1 hover:border-indigo-400/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+      className="skeuo-inset group flex min-h-14 items-center gap-4 rounded-2xl px-4 py-3 transition duration-300 hover:translate-x-1 hover:border-indigo-400/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rtl:hover:-translate-x-1"
     >
       <span className="skeuo-control grid size-10 shrink-0 place-items-center rounded-xl bg-indigo-500/10 text-indigo-500 dark:text-indigo-300">
         {getContactIcon(contact)}
@@ -44,7 +44,7 @@ const ContactItem = ({ contact }: { contact: Contact }) => {
         {contact.text}
       </span>
       {external && (
-        <ArrowUpRight className="size-4 shrink-0 text-muted-foreground transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+        <ArrowUpRight className="size-4 shrink-0 text-muted-foreground transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5" />
       )}
     </Link>
   );

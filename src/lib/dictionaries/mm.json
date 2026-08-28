@@ -49,11 +49,28 @@
         "label": "ချစ်စရာ ပျံသန်းနေသော စက်ရုပ်၏ interactive 3D scene",
         "badge": "ချစ်စရာ ပျံစက်ရုပ်",
         "loading": "ပျံစက်ရုပ်ကို ဖွင့်နေသည်",
+        "view3d": "3D ဖြင့် ကြည့်မည်",
         "fallback": "3D စက်ရုပ်ကို မပြနိုင်သဖြင့် စက်ရုပ်ပုံကို ပြသထားပါသည်။",
         "hint": "လှည့်ရန် ဆွဲရွှေ့ပါ",
         "attribution": "Muhammad Fachrul Hasan Mujtahid ၏ စက်ရုပ်",
         "license": "CC BY 4.0"
       }
+    },
+    "editorial": {
+      "currentFocus": "လက်ရှိ အာရုံစိုက်မှု",
+      "currentTitle": "ဘာသာစကားမျိုးစုံသုံး ဘဏ္ဍာရေး platform များ တည်ဆောက်ခြင်း။",
+      "selectedWork": "ရွေးချယ်ထားသော လက်ရာများ",
+      "workTitle": "ရည်ရွယ်ချက်ရှိစွာ ဖန်တီးထားသော product နှင့် စမ်းသပ်မှုများ။",
+      "viewAll": "Project အားလုံးကြည့်ရန်",
+      "capabilities": "အဓိက ကျွမ်းကျင်မှုများ",
+      "delivery": "အရည်အသွေးနှင့် ပို့ဆောင်မှု",
+      "experience": "အတွေ့အကြုံ အကျဉ်း",
+      "experienceTitle": "ဈေးကွက်မျိုးစုံရှိ team များအတွက် product တည်ဆောက်ခြင်း။",
+      "fullStory": "လုပ်ငန်းခရီးစဉ် အပြည့်အစုံကြည့်ရန်",
+      "writing": "ဆောင်းပါးနှင့် မှတ်စုများ",
+      "writingTitle": "Software တည်ဆောက်ခြင်း၊ လေ့လာခြင်းနှင့် ပို့ဆောင်ခြင်းမှ သင်ခန်းစာများ။",
+      "readNotes": "မှတ်စုများ ဖတ်ရန်",
+      "contact": "ဆက်သွယ်စကားပြောရန်"
     }
   },
   "about": {
@@ -63,7 +80,7 @@
   },
   "projects": {
     "mainTitleDesc": { "title": "ကျွန်ုပ် ပြုလုပ်ခဲ့သော Project များ", "desc": "အတိတ်ကာလအတွင်း ကျွန်ုပ်လုပ်ခဲ့သော Project များကို ကြည့်ရှုပါ။" },
-    "sourceLabel": "GitHub တွင် {name} source ကိုကြည့်ရန်", "demoLabel": "{name} demo ကိုဖွင့်ရန်", "previewLabel": "{name} project နမူနာ",
+    "sourceLabel": "GitHub တွင် {name} source ကိုကြည့်ရန်", "demoLabel": "{name} demo ကိုဖွင့်ရန်", "previewLabel": "{name} project နမူနာ", "projectLabel": "Project", "selectedBuild": "ရွေးချယ်ထားသော လက်ရာ", "exploreProject": "Project ကို ကြည့်ရန်",
     "descriptions": {
       "Online Courses": "Frontend၊ Backend နှင့် အခြားနည်းပညာများကို လေ့လာနိုင်သော အသုံးပြုရလွယ်ကူသည့် online learning platform ဖြစ်ပါသည်။",
       "Shop": "ပစ္စည်းရှာဖွေမှုနှင့် လုံခြုံလွယ်ကူသော ငွေပေးချေမှုပါဝင်သည့် ခေတ်မီ online shop ဖြစ်ပါသည်။",
@@ -73,7 +90,7 @@
       "Customer Service": "မေးမြန်းမှုများကို စီမံပြီး ဖောက်သည်များအား မြန်ဆန်စွာ တုံ့ပြန်နိုင်သော support platform ဖြစ်ပါသည်။"
     }
   },
-  "blogs": { "mainTitleDesc": { "title": "နည်းပညာနှင့် ကျွန်ုပ်၏ ခရီးစဉ်", "desc": "နည်းပညာနှင့် ကျွန်ုပ်၏ developer ခရီးစဉ်အကြောင်းကို မျှဝေသည့် ဘလော့များစုစည်းမှု" }, "coverLabel": "{title} အတွက် မျက်နှာဖုံးပုံ" },
+  "blogs": { "mainTitleDesc": { "title": "နည်းပညာနှင့် ကျွန်ုပ်၏ ခရီးစဉ်", "desc": "နည်းပညာနှင့် ကျွန်ုပ်၏ developer ခရီးစဉ်အကြောင်းကို မျှဝေသည့် ဘလော့များစုစည်းမှု" }, "coverLabel": "{title} အတွက် မျက်နှာဖုံးပုံ", "articleLabel": "ဆောင်းပါး" },
   "contact": {
     "mainTitleDesc": { "title": "ဆက်သွယ်ရန်နှင့် မင်္ဂလာပါပြောပါ!", "desc": "အတူလုပ်ဆောင်လိုပါသလား? ကျွန်ုပ်အား မက်ဆေ့ခ်ျပို့ပါ၊ ပြီးတော့ အတူတကွ အောင်မြင်အောင်လုပ်ကြမယ်!" },
     "eyebrow": "အတူလုပ်ကိုင်ကြပါစို့", "title": "ဆက်သွယ်ရန်အချက်အလက်", "birthday": "ဧပြီ 1997", "resume": "ကိုယ်ရေးရာဇဝင်", "location": "ဒူဘိုင်း၊ UAE", "mapLabel": "ဒူဘိုင်း၊ UAE မြေပုံ"

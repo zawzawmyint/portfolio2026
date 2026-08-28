@@ -63,11 +63,28 @@
         "label": "Interactive 3D scene of a cute flying robot",
         "badge": "Cute flying robot",
         "loading": "Loading flying robot",
+        "view3d": "View in 3D",
         "fallback": "The 3D robot is unavailable. Showing the robot poster instead.",
         "hint": "Drag to rotate",
         "attribution": "Robot by Muhammad Fachrul Hasan Mujtahid",
         "license": "CC BY 4.0"
       }
+    },
+    "editorial": {
+      "currentFocus": "Current focus",
+      "currentTitle": "Building multilingual financial platforms.",
+      "selectedWork": "Selected work",
+      "workTitle": "Products and experiments built with intent.",
+      "viewAll": "View all projects",
+      "capabilities": "Core capabilities",
+      "delivery": "Quality and delivery",
+      "experience": "Experience snapshot",
+      "experienceTitle": "Building products for teams across markets.",
+      "fullStory": "View the full career story",
+      "writing": "Writing and notes",
+      "writingTitle": "Lessons from building, learning, and shipping software.",
+      "readNotes": "Read the notes",
+      "contact": "Start a conversation"
     }
   },
   "about": {
@@ -80,6 +97,9 @@
     "sourceLabel": "View {name} source on GitHub",
     "demoLabel": "Open {name} live demo",
     "previewLabel": "{name} project preview",
+    "projectLabel": "Project",
+    "selectedBuild": "Selected build",
+    "exploreProject": "Explore project",
     "descriptions": {
       "Online Courses": "A friendly online-learning platform with courses for frontend, backend, and broader technology skills.",
       "Shop": "An elegant online shop with smooth product discovery and a simple, secure checkout experience.",
@@ -91,7 +111,8 @@
   },
   "blogs": {
     "mainTitleDesc": { "title": "My Journey in Tech and Beyond", "desc": "A collection of blogs sharing insights on technology and the personal side of my developer journey." },
-    "coverLabel": "Cover image for {title}"
+    "coverLabel": "Cover image for {title}",
+    "articleLabel": "Article"
   },
   "contact": {
     "mainTitleDesc": { "title": "Reach Out and Say Hello!", "desc": "Interested in working together? Send me a message, and let’s make it happen!" },

@@ -156,7 +156,7 @@
     {
       "icon": "FaRegEye",
       "text": "Resume ",
-      "linkto": "https://zawzawmyint.vercel.app/resume/Zaw_Zaw_Myint_Resume.pdf"
+      "linkto": "/resume/Zaw_Zaw_Myint_Resume.pdf"
     },
     {
       "icon": "CiLocationOn",

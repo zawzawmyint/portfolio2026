@@ -4,7 +4,7 @@ import type { Dictionary } from "@/lib/dictionaries/types";
 const BuildTools = ({ dictionary }: { dictionary: Dictionary["common"]["footer"] }) => {
   const builds = [
     { text: dictionary.builtWith, platform: "Next.js 16", href: "https://nextjs.org/" },
-    { text: dictionary.hostedWith, platform: "Vercel", href: "https://vercel.com/" },
+    { text: dictionary.hostedWith, platform: "Netlify", href: "https://www.netlify.com/" },
     { text: dictionary.sourceAt, platform: "GitHub", href: "https://github.com/zawzawmyint" },
   ];
   return (

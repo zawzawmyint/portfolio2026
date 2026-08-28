@@ -45,18 +45,23 @@ const Header = ({ dictionary }: { dictionary: Dictionary["common"] }) => {
 
   return (
     <header
-      className={`sticky left-0 top-0 z-50 transform-gpu px-3 py-3 transition-transform duration-300 motion-reduce:transition-none sm:px-5 ${
+      className={`sticky left-0 top-0 z-50 transform-gpu px-3 py-3 transition-transform duration-300 motion-reduce:transition-none sm:px-6 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="skeuo-panel skeuo-screws relative mx-auto flex min-h-14 max-w-6xl items-center justify-between rounded-[1.125rem] px-5 py-2 backdrop-blur-2xl sm:px-6">
-        <div className="flex items-center justify-center gap-2">
+      <div className="relative mx-auto grid min-h-14 max-w-7xl grid-cols-[1fr_auto] items-center gap-4 rounded-2xl border border-border/70 bg-background/80 px-4 py-2 shadow-[0_18px_60px_-38px_rgba(15,23,42,0.75)] backdrop-blur-2xl sm:grid-cols-[1fr_auto_1fr] sm:px-5">
+        <div className="flex min-w-0 items-center gap-4">
           <Logo />
-          <div className="hidden sm:block">
-            <Navs dictionary={dictionary.navigation} />
+          <div className="hidden min-w-0 border-s border-border/70 ps-4 lg:block">
+            <p className="truncate font-mono text-[0.62rem] uppercase tracking-[0.16em] text-muted-foreground">
+              {dictionary.footer.location}
+            </p>
           </div>
         </div>
-        <div className="flex flex-wrap items-center justify-end gap-1.5">
+        <div className="hidden sm:block">
+          <Navs dictionary={dictionary.navigation} />
+        </div>
+        <div className="flex flex-wrap items-center justify-end gap-1">
           <Socials className="hidden sm:flex" />
           <div className="hidden sm:block">
             <RobotFollowToggle dictionary={dictionary.robotControls} compact />

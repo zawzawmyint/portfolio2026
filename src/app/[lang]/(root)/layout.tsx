@@ -22,7 +22,7 @@ export default async function Layout({
         direction={lang === "ar-SA" ? "rtl" : "ltr"}
       />
       {children}
-      <Footer dictionary={dictionary.common.footer} />
+      <Footer dictionary={dictionary.common} />
     </div>
   );
 }

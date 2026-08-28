@@ -1,4 +1,4 @@
-import MainTitleDesc from "@/components/generic/MainTitleDesc";
+import EditorialHero from "@/components/generic/EditorialHero";
 import BaseContainer from "@/components/global/base-container/BaseContainer";
 import Projects from "@/components/pages/projects/Projects";
 import { getDictionary, Locale } from "@/lib/dictionaries/dictionaries";
@@ -12,10 +12,15 @@ export default async function Page({
   const dict = await getDictionary(lang);
   return (
     <>
-      <MainTitleDesc
+      <EditorialHero
+        variant="projects"
+        index="03"
+        eyebrow={dict.common.navigation.projects}
         title={dict.projects.mainTitleDesc.title}
-        desc={dict.projects.mainTitleDesc.desc}
-        url="https://www.pexels.com/download/video/2909914/"
+        description={dict.projects.mainTitleDesc.desc}
+        videoSrc="https://www.pexels.com/download/video/2909914/"
+        poster="/images/projectsImage/online-courses.png"
+        meta={[dict.projects.selectedBuild, dict.common.actions.myProjects, "2022 — 2026"]}
       />
       <BaseContainer>
         <Projects dictionary={dict.projects} />

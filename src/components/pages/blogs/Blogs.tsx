@@ -14,16 +14,16 @@ const Blogs = async ({
   const data = await getBlogs();
 
   return (
-    <div
-      data-robot-guide="blogsCollection"
-      className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
-    >
+    <div data-robot-guide="blogsCollection" className="space-y-5">
       {data.dataMedium.map((blog: Blog, i: number) => (
         <BlogCard
           key={blog.title + i}
           blog={blog}
           coverLabel={dictionary.coverLabel}
           readMoreLabel={readMoreLabel}
+          featured={i === 0}
+          index={i}
+          articleLabel={dictionary.articleLabel}
         />
       ))}
     </div>

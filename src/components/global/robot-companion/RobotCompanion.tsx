@@ -9,6 +9,10 @@ import { useHasFinePointer, useRobotFollowing } from "./robot-preference";
 const MODEL_PATH = "/models/cute-flying-robot.glb";
 const POSTER_PATH = "/images/3d/cute-flying-robot-poster.jpg";
 const ModelViewer = "model-viewer" as React.ElementType;
+type ModelViewerElement = HTMLElement & {
+  play?: () => void;
+  pause?: () => void;
+};
 
 type CompanionDictionary = Dictionary["common"]["robotCompanion"];
 type GuideDictionary = Dictionary["common"]["robotGuide"];
@@ -72,6 +76,7 @@ export default function RobotCompanion({
 }) {
   const layerRef = React.useRef<HTMLDivElement>(null);
   const bubblePositionRef = React.useRef<HTMLDivElement>(null);
+  const viewerRef = React.useRef<ModelViewerElement | null>(null);
   const targetRef = React.useRef({ x: 0, y: 0 });
   const positionRef = React.useRef({ x: 0, y: 0 });
   const pathname = usePathname();
@@ -80,7 +85,16 @@ export default function RobotCompanion({
   const shouldFollow = preferenceAllowsFollowing && !reduceMotion;
   const hasFinePointer = useHasFinePointer();
   const [moduleReady, setModuleReady] = React.useState(false);
+  const [documentVisible, setDocumentVisible] = React.useState(true);
+  const [introductionState, setIntroductionState] = React.useState({
+    pathname: "",
+    visible: false,
+  });
   const [sectionGreeting, setSectionGreeting] = React.useState<SectionGreeting | null>(null);
+  const introductionVisible =
+    introductionState.pathname === pathname && introductionState.visible;
+  const companionSuspended = !documentVisible || introductionVisible;
+  const companionAnimating = shouldFollow && !companionSuspended;
 
   React.useEffect(() => {
     if (!hasFinePointer) return;
@@ -90,13 +104,65 @@ export default function RobotCompanion({
         if (!cancelled) setModuleReady(true);
       });
     };
-    const idleCallback = window.setTimeout(load, 900);
+    let idleCallback = 0;
+    let fallbackTimer = 0;
+    const requestIdle = (
+      window as unknown as {
+        requestIdleCallback?: Window["requestIdleCallback"];
+      }
+    ).requestIdleCallback?.bind(window);
+    const cancelIdle = (
+      window as unknown as {
+        cancelIdleCallback?: Window["cancelIdleCallback"];
+      }
+    ).cancelIdleCallback?.bind(window);
+
+    if (requestIdle) {
+      idleCallback = requestIdle(load, { timeout: 3000 });
+    } else {
+      fallbackTimer = window.setTimeout(load, 1800);
+    }
 
     return () => {
       cancelled = true;
-      window.clearTimeout(idleCallback);
+      if (idleCallback) cancelIdle?.(idleCallback);
+      if (fallbackTimer) window.clearTimeout(fallbackTimer);
     };
   }, [hasFinePointer]);
+
+  React.useEffect(() => {
+    const handleVisibilityChange = () => {
+      setDocumentVisible(document.visibilityState === "visible");
+    };
+
+    handleVisibilityChange();
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
+  }, []);
+
+  React.useEffect(() => {
+    if (!hasFinePointer) return;
+    const introduction = document.querySelector<HTMLElement>("[data-robot-scene]");
+    if (!introduction) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) =>
+        setIntroductionState({
+          pathname,
+          visible: entry.isIntersecting && entry.intersectionRatio >= 0.15,
+        }),
+      { threshold: [0, 0.15] },
+    );
+    observer.observe(introduction);
+    return () => observer.disconnect();
+  }, [hasFinePointer, pathname]);
+
+  React.useEffect(() => {
+    const viewer = viewerRef.current;
+    if (!viewer || !moduleReady) return;
+    if (companionAnimating) viewer.play?.();
+    else viewer.pause?.();
+  }, [companionAnimating, moduleReady]);
 
   React.useEffect(() => {
     const layer = layerRef.current;
@@ -109,13 +175,14 @@ export default function RobotCompanion({
     };
     targetRef.current = restingPosition;
     positionRef.current = restingPosition;
-    layer.style.opacity = "1";
+    layer.style.opacity = companionSuspended ? "0" : "1";
+    layer.style.visibility = companionSuspended ? "hidden" : "visible";
     if (bubblePositionRef.current) {
       bubblePositionRef.current.style.left = "auto";
       bubblePositionRef.current.style.right = "78%";
     }
 
-    if (reduceMotion) {
+    if (reduceMotion || !shouldFollow || companionSuspended) {
       layer.style.transform = `translate3d(${restingPosition.x}px, ${restingPosition.y}px, 0)`;
       return;
     }
@@ -128,10 +195,6 @@ export default function RobotCompanion({
         bubble.style.left = placeBubbleOnLeft ? "auto" : "78%";
         bubble.style.right = placeBubbleOnLeft ? "78%" : "auto";
       }
-      const overIntroductionRobot = Boolean(
-        document.elementFromPoint(event.clientX, event.clientY)?.closest("[data-robot-scene]"),
-      );
-      layer.style.opacity = overIntroductionRobot ? "0" : "1";
       targetRef.current = {
         x: Math.max(8, Math.min(window.innerWidth - companionSize - 8, event.clientX + 28)),
         y: Math.max(8, Math.min(window.innerHeight - companionSize - 8, event.clientY + 22)),
@@ -157,25 +220,22 @@ export default function RobotCompanion({
       animationFrame = window.requestAnimationFrame(animate);
     };
 
-    if (shouldFollow) {
-      window.addEventListener("pointermove", handlePointerMove, { passive: true });
-    }
+    window.addEventListener("pointermove", handlePointerMove, { passive: true });
     window.addEventListener("resize", handleResize, { passive: true });
     animationFrame = window.requestAnimationFrame(animate);
 
     return () => {
-      if (shouldFollow) {
-        window.removeEventListener("pointermove", handlePointerMove);
-      }
+      window.removeEventListener("pointermove", handlePointerMove);
       window.removeEventListener("resize", handleResize);
       window.cancelAnimationFrame(animationFrame);
       layer.style.opacity = "";
+      layer.style.visibility = "";
       layer.style.transform = "";
     };
-  }, [hasFinePointer, reduceMotion, shouldFollow]);
+  }, [companionSuspended, hasFinePointer, reduceMotion, shouldFollow]);
 
   React.useEffect(() => {
-    if (!hasFinePointer) return;
+    if (!hasFinePointer || companionSuspended) return;
 
     const seen = new Set<GuideSection>();
     let cooldownUntil = 0;
@@ -240,7 +300,7 @@ export default function RobotCompanion({
       window.removeEventListener("scroll", requestEvaluation);
       window.removeEventListener("resize", requestEvaluation);
     };
-  }, [hasFinePointer, pathname, sectionDictionary]);
+  }, [companionSuspended, hasFinePointer, pathname, sectionDictionary]);
 
   if (!hasFinePointer) return null;
 
@@ -275,11 +335,12 @@ export default function RobotCompanion({
       </div>
       {moduleReady && (
         <ModelViewer
+          ref={viewerRef}
           aria-hidden="true"
           src={modelSource}
           poster={POSTER_PATH}
           alt=""
-          auto-rotate={!reduceMotion}
+          auto-rotate={companionAnimating}
           auto-rotate-delay="0"
           rotation-per-second="10deg"
           interaction-prompt="none"

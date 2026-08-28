@@ -49,11 +49,28 @@
         "label": "かわいい空飛ぶロボットのインタラクティブ3Dシーン",
         "badge": "かわいい空飛ぶロボット",
         "loading": "空飛ぶロボットを読み込み中",
+        "view3d": "3Dで見る",
         "fallback": "3Dロボットを表示できないため、ポスターを表示しています。",
         "hint": "ドラッグして回転",
         "attribution": "ロボット制作：Muhammad Fachrul Hasan Mujtahid",
         "license": "CC BY 4.0"
       }
+    },
+    "editorial": {
+      "currentFocus": "現在のフォーカス",
+      "currentTitle": "多言語対応の金融プラットフォームを構築。",
+      "selectedWork": "厳選したプロジェクト",
+      "workTitle": "意図を持って設計したプロダクトと実験。",
+      "viewAll": "すべてのプロジェクトを見る",
+      "capabilities": "主要なスキル",
+      "delivery": "品質とデリバリー",
+      "experience": "経験の概要",
+      "experienceTitle": "複数市場で働くチームのためのプロダクト開発。",
+      "fullStory": "職歴をすべて見る",
+      "writing": "記事とノート",
+      "writingTitle": "ソフトウェアを作り、学び、届ける中で得た知見。",
+      "readNotes": "記事を読む",
+      "contact": "話を始める"
     }
   },
   "about": {
@@ -63,7 +80,7 @@
   },
   "projects": {
     "mainTitleDesc": { "title": "私が手掛けたプロジェクト", "desc": "過去に取り組んだプロジェクトの一部をご覧ください。" },
-    "sourceLabel": "GitHubで{name}のソースを見る", "demoLabel": "{name}のデモを開く", "previewLabel": "{name}プロジェクトのプレビュー",
+    "sourceLabel": "GitHubで{name}のソースを見る", "demoLabel": "{name}のデモを開く", "previewLabel": "{name}プロジェクトのプレビュー", "projectLabel": "プロジェクト", "selectedBuild": "厳選した制作物", "exploreProject": "プロジェクトを見る",
     "descriptions": {
       "Online Courses": "フロントエンド、バックエンドなどの技術を学べる、使いやすいオンライン学習プラットフォームです。",
       "Shop": "商品をスムーズに探し、安全でシンプルに購入できる洗練されたオンラインショップです。",
@@ -73,7 +90,7 @@
       "Customer Service": "問い合わせ管理と迅速な返信を支援する効率的なカスタマーサポート基盤です。"
     }
   },
-  "blogs": { "mainTitleDesc": { "title": "テクノロジーとその先の私の旅", "desc": "テクノロジーに関する洞察や、開発者としての旅の個人的な側面を共有するブログのコレクションです。" }, "coverLabel": "{title}のカバー画像" },
+  "blogs": { "mainTitleDesc": { "title": "テクノロジーとその先の私の旅", "desc": "テクノロジーに関する洞察や、開発者としての旅の個人的な側面を共有するブログのコレクションです。" }, "coverLabel": "{title}のカバー画像", "articleLabel": "記事" },
   "contact": {
     "mainTitleDesc": { "title": "お気軽にご連絡ください！", "desc": "一緒に仕事をしたいですか？メッセージを送ってください、そして実現させましょう！" },
     "eyebrow": "一緒に仕事をしましょう", "title": "連絡先", "birthday": "1997年4月", "resume": "履歴書", "location": "UAE・ドバイ", "mapLabel": "UAE・ドバイの地図"

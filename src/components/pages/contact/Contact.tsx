@@ -7,7 +7,7 @@ const Contact = ({ dictionary }: { dictionary: Dictionary["contact"] }) => {
     <div
       id="contact-content"
       data-robot-guide="contactDetails"
-      className="grid items-start gap-6 lg:grid-cols-2"
+      className="grid items-start gap-8 lg:grid-cols-[0.72fr_1.28fr]"
     >
       <ContactData dictionary={dictionary} />
       <ContactMap title={dictionary.mapLabel} />

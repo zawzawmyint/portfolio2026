@@ -1,4 +1,4 @@
-import MainTitleDesc from "@/components/generic/MainTitleDesc";
+import EditorialHero from "@/components/generic/EditorialHero";
 import BaseContainer from "@/components/global/base-container/BaseContainer";
 import Home from "@/components/pages/home/Home";
 import { Button } from "@/components/ui/button";
@@ -17,29 +17,30 @@ export default async function Page({
 
   return (
     <>
-      <MainTitleDesc
+      <EditorialHero
+        variant="home"
+        index="01"
+        eyebrow={dict.common.navigation.home}
         title={dict.home.mainTitleDesc.title}
-        desc={dict.home.mainTitleDesc.desc}
-        url="https://www.pexels.com/download/video/855282/"
-        high="min-h-[470px]"
+        description={dict.home.mainTitleDesc.desc}
+        videoSrc="https://www.pexels.com/download/video/855282/"
+        poster="/images/intro/Zack.dev.png"
+        meta={[dict.common.footer.location, dict.about.sections.experiences, "Next.js · React · TypeScript"]}
       >
-        <h4 className="text-sm">{dict.home.mainTitleDesc.subdesc}</h4>
-        <div className="flex flex-wrap items-center justify-center gap-3">
-          <MovingBorder className="rounded-[calc(1rem-1px)] bg-white px-5 py-2.5 text-sm font-semibold text-slate-950">
+          <MovingBorder className="rounded-[calc(1rem-1px)] bg-foreground px-5 py-2.5 text-sm font-semibold text-background">
             <Link href={`/${lang}/projects`} className="block">
               {dict.common.actions.myProjects}
             </Link>
           </MovingBorder>
-          <Button asChild variant="outline" className="border-white/20 bg-slate-950/35 text-white backdrop-blur-md hover:bg-white hover:text-slate-950">
+          <Button asChild variant="outline" className="rounded-xl">
             <Link href="https://github.com/zawzawmyint" target="_blank" rel="noreferrer">
               <Github />
               Github
             </Link>
           </Button>
-        </div>
-      </MainTitleDesc>
+      </EditorialHero>
       <BaseContainer>
-        <Home dictionary={dict.home.introduction} lang={lang} />
+        <Home dictionary={dict} lang={lang} />
       </BaseContainer>
     </>
   );

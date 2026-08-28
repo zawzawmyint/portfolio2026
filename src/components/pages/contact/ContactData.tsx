@@ -1,4 +1,3 @@
-import { MovingBorder } from "@/components/ui/aceternity/moving-border";
 import db from "../../../../_data/db.json";
 import ContactItem from "./ContactItem";
 import type { Dictionary } from "@/lib/dictionaries/types";
@@ -12,7 +11,7 @@ const ContactData = ({ dictionary }: { dictionary: Dictionary["contact"] }) => {
   });
 
   return (
-    <MovingBorder className="p-6 sm:p-8">
+    <section className="rounded-[1.75rem] border border-border/70 bg-background/70 p-6 sm:p-8 lg:sticky lg:top-28">
       <p className="font-mono text-xs uppercase tracking-[0.24em] text-indigo-500 dark:text-indigo-300">
         {dictionary.eyebrow}
       </p>
@@ -22,7 +21,7 @@ const ContactData = ({ dictionary }: { dictionary: Dictionary["contact"] }) => {
           <ContactItem key={contact.text} contact={contact} />
         ))}
       </div>
-    </MovingBorder>
+    </section>
   );
 };
 

@@ -1,4 +1,4 @@
-import MainTitleDesc from "@/components/generic/MainTitleDesc";
+import EditorialHero from "@/components/generic/EditorialHero";
 import BaseContainer from "@/components/global/base-container/BaseContainer";
 import About from "@/components/pages/about/About";
 import { Button } from "@/components/ui/button";
@@ -15,12 +15,16 @@ export default async function Page({
   const dict = await getDictionary(lang);
   return (
     <>
-      <MainTitleDesc
+      <EditorialHero
+        variant="about"
+        index="02"
+        eyebrow={dict.common.navigation.about}
         title={dict.about.mainTitleDesc.title}
-        desc={dict.about.mainTitleDesc.desc}
-        high="min-h-[400px]"
+        description={dict.about.mainTitleDesc.desc}
+        videoSrc="https://www.pexels.com/download/video/6864603/"
+        poster="/images/ProfileImage.jpg"
+        meta={[dict.common.footer.location, dict.about.sections.career]}
       >
-        <div className="flex flex-wrap items-center justify-center gap-3">
           <Button asChild className="bg-white text-slate-950 hover:bg-white/90">
             <Link
               href="https://www.linkedin.com/in/zaw-zaw-myint-29745a199/"
@@ -37,10 +41,9 @@ export default async function Page({
               {dict.contact.resume}
             </a>
           </Button>
-        </div>
-      </MainTitleDesc>
+      </EditorialHero>
       <BaseContainer>
-        <About dictionary={dict.about} />
+        <About dictionary={dict.about} introduction={dict.home.introduction.paragraphs} />
       </BaseContainer>
     </>
   );

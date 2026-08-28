@@ -1,5 +1,5 @@
 import BlogsFallback from "@/components/fallback/BlogsFallback";
-import MainTitleDesc from "@/components/generic/MainTitleDesc";
+import EditorialHero from "@/components/generic/EditorialHero";
 import BaseContainer from "@/components/global/base-container/BaseContainer";
 import Blogs from "@/components/pages/blogs/Blogs";
 import { getDictionary, Locale } from "@/lib/dictionaries/dictionaries";
@@ -14,10 +14,15 @@ export default async function Page({
   const dict = await getDictionary(lang);
   return (
     <>
-      <MainTitleDesc
+      <EditorialHero
+        variant="blogs"
+        index="04"
+        eyebrow={dict.common.navigation.blogs}
         title={dict.blogs.mainTitleDesc.title}
-        desc={dict.blogs.mainTitleDesc.desc}
-        url="https://www.pexels.com/download/video/3476248/"
+        description={dict.blogs.mainTitleDesc.desc}
+        videoSrc="https://www.pexels.com/download/video/3476248/"
+        poster="/images/amazing.png"
+        meta={[dict.common.navigation.blogs, dict.common.actions.readMore, "Medium"]}
       />
       <BaseContainer>
         {" "}
