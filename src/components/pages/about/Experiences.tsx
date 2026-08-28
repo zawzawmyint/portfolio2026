@@ -12,7 +12,7 @@ interface ExperiencesProps {
 
 const Experiences = ({ experiences, dictionary }: ExperiencesProps) => {
   return (
-    <section className="space-y-10">
+    <section className="space-y-10" data-robot-guide="aboutExperience">
       <Reveal>
         <p className="mb-3 font-mono text-sm uppercase tracking-[0.28em] text-indigo-500 dark:text-indigo-300">
           {dictionary.career}

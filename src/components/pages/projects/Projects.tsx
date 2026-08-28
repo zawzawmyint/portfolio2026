@@ -4,7 +4,11 @@ import type { Dictionary } from "@/lib/dictionaries/types";
 
 const Projects = ({ dictionary }: { dictionary: Dictionary["projects"] }) => {
   return (
-    <div id="projects-grid" className="grid grid-cols-1 gap-6 md:grid-cols-2">
+    <div
+      id="projects-grid"
+      data-robot-guide="projectsGallery"
+      className="grid grid-cols-1 gap-6 md:grid-cols-2"
+    >
       {db.projects.map((proj, i) => {
         const description = dictionary.descriptions[
           proj.name as keyof typeof dictionary.descriptions

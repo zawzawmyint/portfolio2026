@@ -2,6 +2,28 @@
   "hello": "こんにちは",
   "common": {
     "navigation": { "home": "ホーム", "about": "プロフィール", "projects": "プロジェクト", "blogs": "ブログ", "contact": "お問い合わせ", "label": "メインナビゲーション", "open": "ナビゲーションを開く", "close": "ナビゲーションを閉じる", "description": "ポートフォリオのページを選択してください。" },
+    "robotCompanion": {
+      "home": "ようこそ！サイトをご案内します。",
+      "about": "Zackの経歴、スキル、愛用ツールをご紹介します。",
+      "projects": "Zackが手がけたプロダクトや実験をご覧ください。",
+      "blogs": "技術の学びやアイデア、開発ノートをまとめています。",
+      "contact": "一緒に何か作りませんか？お気軽にどうぞ！"
+    },
+    "robotGuide": {
+      "homeIntroduction": "Zackが信頼性と人を中心に考えてプロダクトを作る姿勢をご紹介します。",
+      "aboutSkills": "アイデアをプロダクトに変えるためにZackが使う技術です。",
+      "aboutExperience": "このタイムラインでZackのキャリアをたどれます。",
+      "projectsGallery": "プロジェクトを開いて、Zackの制作物をご覧ください。",
+      "blogsCollection": "技術を中心とした学びや気づきを共有しています。",
+      "contactDetails": "こちらから連絡方法を選んでZackにメッセージできます。"
+    },
+    "robotControls": {
+      "follow": "ロボットをカーソルについてこさせる",
+      "dock": "ロボットを隅に固定する",
+      "following": "ロボットがカーソルを追従中",
+      "docked": "ロボットは隅に固定中",
+      "reducedMotion": "視差効果を減らす設定のためロボットは固定されています"
+    },
     "actions": { "myProjects": "プロジェクトを見る", "readMore": "続きを読む" },
     "controls": { "selectLanguage": "言語を選択", "toggleTheme": "ライトモードとダークモードを切り替える" },
     "languages": { "english": "英語", "thai": "タイ語", "myanmar": "ミャンマー語", "japanese": "日本語", "arabic": "アラビア語" },
@@ -23,8 +45,15 @@
       "closingMiddle": "でご覧いただくか、",
       "closingContact": "お気軽にご連絡ください",
       "closingAfter": "。一緒に価値あるものを作りましょう。",
-      "carouselLabel": "スクリーンの外の時間",
-      "imageAlts": ["Mou湖のZack", "街を散策するZack", "屋外のZack", "インレー湖の風景", "旅先のZack", "ミッチーナ湖の風景"]
+      "scene": {
+        "label": "かわいい空飛ぶロボットのインタラクティブ3Dシーン",
+        "badge": "かわいい空飛ぶロボット",
+        "loading": "空飛ぶロボットを読み込み中",
+        "fallback": "3Dロボットを表示できないため、ポスターを表示しています。",
+        "hint": "ドラッグして回転",
+        "attribution": "ロボット制作：Muhammad Fachrul Hasan Mujtahid",
+        "license": "CC BY 4.0"
+      }
     }
   },
   "about": {

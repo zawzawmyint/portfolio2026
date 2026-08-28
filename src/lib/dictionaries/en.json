@@ -12,6 +12,28 @@
       "close": "Close navigation menu",
       "description": "Choose a page from the portfolio navigation."
     },
+    "robotCompanion": {
+      "home": "Welcome! I’ll show you around.",
+      "about": "Meet Zack through his story, skills, and favorite tools.",
+      "projects": "Explore the products and experiments Zack has built.",
+      "blogs": "Thoughts, lessons, and engineering notes live here.",
+      "contact": "Want to build something together? Say hello!"
+    },
+    "robotGuide": {
+      "homeIntroduction": "Here’s how Zack approaches reliable, human-centered products.",
+      "aboutSkills": "These are the technologies Zack uses to turn ideas into products.",
+      "aboutExperience": "This timeline follows Zack’s professional journey.",
+      "projectsGallery": "Open a project to explore what Zack has built.",
+      "blogsCollection": "These notes share lessons from technology and beyond.",
+      "contactDetails": "Choose a channel here to start a conversation with Zack."
+    },
+    "robotControls": {
+      "follow": "Let the robot follow the cursor",
+      "dock": "Dock the robot",
+      "following": "Robot follows cursor",
+      "docked": "Robot is docked",
+      "reducedMotion": "Robot is docked because reduced motion is enabled"
+    },
     "actions": { "myProjects": "My Projects", "readMore": "Read more" },
     "controls": { "selectLanguage": "Select language", "toggleTheme": "Toggle between light and dark mode" },
     "languages": { "english": "English", "thai": "Thai", "myanmar": "Myanmar", "japanese": "Japanese", "arabic": "Arabic" },
@@ -37,8 +59,15 @@
       "closingMiddle": "or",
       "closingContact": "get in touch",
       "closingAfter": "and let’s create something meaningful together.",
-      "carouselLabel": "Life beyond the screen",
-      "imageAlts": ["Zack at Mou Lake", "Zack exploring a city", "Zack outdoors", "A view across Inle Lake", "Zack on a trip", "Landscape at Myitkyina Lake"]
+      "scene": {
+        "label": "Interactive 3D scene of a cute flying robot",
+        "badge": "Cute flying robot",
+        "loading": "Loading flying robot",
+        "fallback": "The 3D robot is unavailable. Showing the robot poster instead.",
+        "hint": "Drag to rotate",
+        "attribution": "Robot by Muhammad Fachrul Hasan Mujtahid",
+        "license": "CC BY 4.0"
+      }
     }
   },
   "about": {

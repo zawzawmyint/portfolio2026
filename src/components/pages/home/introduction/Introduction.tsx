@@ -1,7 +1,7 @@
 import { BentoGrid, BentoGridItem } from "@/components/ui/aceternity/bento-grid";
 import { Reveal } from "@/components/ui/aceternity/reveal";
 import IntroductionDesc from "./IntroductionDesc";
-import { IntroCarousel } from "./intro-carousel/IntroCarousel";
+import { DeveloperScene } from "./DeveloperScene";
 import type { Dictionary } from "@/lib/dictionaries/types";
 import type { Locale } from "@/lib/dictionaries/dictionaries";
 
@@ -13,7 +13,7 @@ const Introduction = ({
   lang: Locale;
 }) => {
   return (
-    <section aria-labelledby="introduction-title">
+    <section aria-labelledby="introduction-title" data-robot-guide="homeIntroduction">
       <Reveal>
         <p className="mb-3 font-mono text-sm uppercase tracking-[0.28em] text-indigo-500 dark:text-indigo-300">
           {dictionary.eyebrow}
@@ -30,7 +30,7 @@ const Introduction = ({
           <IntroductionDesc dictionary={dictionary} lang={lang} />
         </BentoGridItem>
         <BentoGridItem className="min-h-[24rem] p-2 sm:p-2 lg:col-span-3">
-          <IntroCarousel label={dictionary.carouselLabel} imageAlts={dictionary.imageAlts} />
+          <DeveloperScene dictionary={dictionary.scene} />
         </BentoGridItem>
       </BentoGrid>
     </section>

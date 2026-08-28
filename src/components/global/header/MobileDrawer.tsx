@@ -18,6 +18,7 @@ import BuildTools from "../footer/BuildTools";
 import { Navs } from "./Navs";
 import Socials from "./Socials";
 import type { Dictionary } from "@/lib/dictionaries/types";
+import RobotFollowToggle from "../robot-companion/RobotFollowToggle";
 
 export function MobileDrawer({ dictionary }: { dictionary: Dictionary["common"] }) {
   return (
@@ -52,6 +53,7 @@ export function MobileDrawer({ dictionary }: { dictionary: Dictionary["common"] 
             </div>
           </div>
           <DrawerFooter className="items-center gap-4 pb-7">
+            <RobotFollowToggle dictionary={dictionary.robotControls} />
             <Socials />
             <BuildTools dictionary={dictionary.footer} />
           </DrawerFooter>

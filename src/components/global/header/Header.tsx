@@ -8,6 +8,7 @@ import { Navs } from "./Navs";
 import Socials from "./Socials";
 import LanguageSwitcher from "./LanguageSwitcher";
 import type { Dictionary } from "@/lib/dictionaries/types";
+import RobotFollowToggle from "../robot-companion/RobotFollowToggle";
 
 const Header = ({ dictionary }: { dictionary: Dictionary["common"] }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -57,6 +58,9 @@ const Header = ({ dictionary }: { dictionary: Dictionary["common"] }) => {
         </div>
         <div className="flex flex-wrap items-center justify-end gap-1.5">
           <Socials className="hidden sm:flex" />
+          <div className="hidden sm:block">
+            <RobotFollowToggle dictionary={dictionary.robotControls} compact />
+          </div>
           <LanguageSwitcher controls={dictionary.controls} languages={dictionary.languages} />
           <ModeToggle label={dictionary.controls.toggleTheme} />
           <div className="sm:hidden">

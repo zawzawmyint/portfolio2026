@@ -6,12 +6,14 @@ import React from "react";
 const TitlevsTools = ({
   title = "title",
   tools,
+  robotGuide,
 }: {
   title: string;
   tools: Tool[];
+  robotGuide?: string;
 }) => {
   return (
-    <section className="space-y-5">
+    <section className="space-y-5" data-robot-guide={robotGuide}>
       <Reveal>
         <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">{title}</h2>
       </Reveal>

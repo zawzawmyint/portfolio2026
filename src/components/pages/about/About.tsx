@@ -19,7 +19,11 @@ const About = ({ dictionary }: { dictionary: Dictionary["about"] }) => {
 
   return (
     <div className="space-y-16 sm:space-y-24">
-      <TitlevsTools title={dictionary.sections.languages} tools={localizeLevels(db.skills.languages)} />
+      <TitlevsTools
+        title={dictionary.sections.languages}
+        tools={localizeLevels(db.skills.languages)}
+        robotGuide="aboutSkills"
+      />
       <TitlevsTools
         title={dictionary.sections.frontend}
         tools={localizeLevels(db.skills["frontend-developments"])}
