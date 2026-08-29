@@ -61,8 +61,8 @@ export default function EditorialHero({
   const sectionRef = React.useRef<HTMLElement>(null);
   const videoRef = React.useRef<HTMLVideoElement>(null);
   const reduceMotion = useReducedMotion();
-  const [isVisible, setIsVisible] = React.useState(true);
-  const [documentVisible, setDocumentVisible] = React.useState(true);
+  const [isVisible, setIsVisible] = React.useState(false);
+  const [documentVisible, setDocumentVisible] = React.useState(false);
   const layout = layouts[variant];
   const entrance = reduceMotion
     ? undefined
@@ -110,7 +110,7 @@ export default function EditorialHero({
           layout.shell,
         )}
       >
-        <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(to_right,hsl(var(--border)/0.32)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.24)_1px,transparent_1px)] [background-size:4rem_4rem] [mask-image:linear-gradient(to_right,black,transparent_72%)]" />
+        <div className="pointer-events-none absolute inset-0 opacity-50 [background-image:linear-gradient(to_right,hsl(var(--border)/0.32)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.24)_1px,transparent_1px)] [background-size:4rem_4rem] [mask-image:linear-gradient(to_right,black,transparent_72%)]" />
 
         <motion.div
           className={cn("relative z-10 flex flex-col justify-between p-6 sm:p-10 lg:p-14", layout.copy)}
@@ -124,8 +124,8 @@ export default function EditorialHero({
           </div>
 
           <motion.div className="mt-20 max-w-4xl lg:mt-24" variants={entrance} transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}>
-            <p className="mb-5 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] text-indigo-500 dark:text-indigo-300">
-              <span className="size-2 rounded-full bg-cyan-400 shadow-[0_0_14px_rgba(34,211,238,0.85)]" />
+            <p className="mb-5 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.22em] text-brand">
+              <span className="size-2 rounded-full bg-brass shadow-[0_0_14px_rgb(var(--brand-secondary)/0.7)]" />
               Portfolio · 2026
             </p>
             <h1 className="text-balance text-[clamp(2.75rem,7vw,6.8rem)] font-semibold leading-[0.92] tracking-[-0.065em]">

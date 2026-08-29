@@ -28,7 +28,7 @@ const BlogCard = ({
           href={blog.link}
           target="_blank"
           rel="noreferrer"
-          className={cn("group/image relative block overflow-hidden rounded-2xl bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-indigo-400", featured ? "min-h-[23rem]" : "aspect-[4/3]")}
+          className={cn("group/image relative block overflow-hidden rounded-2xl bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-brand", featured ? "min-h-[23rem]" : "aspect-[4/3]")}
         >
           <Image
             src={blog.image}
@@ -45,17 +45,17 @@ const BlogCard = ({
 
         <div className={cn("flex flex-1 flex-col justify-center", featured ? "p-5 sm:p-8 lg:p-10" : "py-2")}>
           <span className="mb-4 font-mono text-[0.65rem] uppercase tracking-[0.18em] text-muted-foreground">{articleLabel} / {String(index + 1).padStart(2, "0")}</span>
-          <p className="font-mono text-xs uppercase tracking-[0.18em] text-indigo-500 dark:text-indigo-300">
+          <p className="font-mono text-xs uppercase tracking-[0.18em] text-brand">
             {blog.date}
           </p>
           <h2 className={cn("font-semibold leading-snug tracking-tight", featured ? "text-3xl sm:text-4xl" : "text-xl")}>
-            <Link className="hover:text-indigo-500" href={blog.link} target="_blank" rel="noreferrer">
+            <Link className="hover:text-brand" href={blog.link} target="_blank" rel="noreferrer">
               {blog.title}
             </Link>
           </h2>
           <p className={cn("mt-4 flex-1 text-sm leading-7 text-muted-foreground", !featured && "line-clamp-2")}>
             {blog.description}{" "}
-            <Link className="font-medium text-foreground underline decoration-indigo-400/60 underline-offset-4" href={blog.link} target="_blank" rel="noreferrer">
+            <Link className="font-medium text-foreground underline decoration-brand/60 underline-offset-4" href={blog.link} target="_blank" rel="noreferrer">
               {readMoreLabel}
             </Link>
           </p>

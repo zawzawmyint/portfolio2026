@@ -38,7 +38,7 @@ const ProjectCard = ({
 
           <div className={cn("flex min-h-[24rem] flex-col justify-between p-5 sm:p-8 lg:p-10", isReversed && "lg:order-1")}>
             <div>
-              <p className="font-mono text-[0.68rem] uppercase tracking-[0.2em] text-indigo-500 dark:text-indigo-300">{labels.selectedBuild} · 2026</p>
+              <p className="font-mono text-[0.68rem] uppercase tracking-[0.2em] text-brand">{labels.selectedBuild} · 2026</p>
               <h2 className="mt-5 text-balance text-4xl font-semibold leading-none tracking-[-0.045em] sm:text-5xl">{project.name}</h2>
               <p className="mt-6 text-base leading-8 text-muted-foreground">{project.description}</p>
               <div className="mt-7 flex flex-wrap gap-2">
@@ -55,7 +55,7 @@ const ProjectCard = ({
                     target="_blank"
                     rel="noreferrer"
                     aria-label={formatLabel(labels.sourceLabel)}
-                    className="group/link grid size-11 place-items-center rounded-full border border-border transition hover:bg-foreground hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 motion-reduce:transition-none"
+                    className="group/link grid size-11 place-items-center rounded-full border border-border transition hover:bg-foreground hover:text-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand motion-reduce:transition-none"
                   >
                     <Github className="size-4 transition-transform duration-300 group-hover/link:-translate-y-0.5 motion-reduce:transition-none motion-reduce:group-hover/link:translate-y-0" />
                   </Link>
@@ -66,7 +66,7 @@ const ProjectCard = ({
                     target="_blank"
                     rel="noreferrer"
                     aria-label={formatLabel(labels.demoLabel)}
-                    className="group/link grid size-11 place-items-center rounded-full bg-foreground text-background transition hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 motion-reduce:transition-none motion-reduce:hover:scale-100"
+                    className="group/link grid size-11 place-items-center rounded-full bg-foreground text-background transition hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand motion-reduce:transition-none motion-reduce:hover:scale-100"
                   >
                     <EditorialArrow className="size-4" />
                   </Link>

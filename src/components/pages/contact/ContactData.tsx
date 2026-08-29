@@ -11,8 +11,8 @@ const ContactData = ({ dictionary }: { dictionary: Dictionary["contact"] }) => {
   });
 
   return (
-    <section className="rounded-[1.75rem] border border-border/70 bg-background/70 p-6 sm:p-8 lg:sticky lg:top-28">
-      <p className="font-mono text-xs uppercase tracking-[0.24em] text-indigo-500 dark:text-indigo-300">
+    <section className="min-w-0 rounded-[1.75rem] border border-border/70 bg-background/70 p-5 sm:p-8 lg:sticky lg:top-28">
+      <p className="font-mono text-xs uppercase tracking-[0.24em] text-brand">
         {dictionary.eyebrow}
       </p>
       <h2 className="mt-3 text-3xl font-semibold tracking-tight">{dictionary.title}</h2>

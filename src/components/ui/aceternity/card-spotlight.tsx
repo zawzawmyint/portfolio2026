@@ -26,7 +26,7 @@ export function CardSpotlight({
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100"
         style={{
           background:
-            "radial-gradient(420px circle at var(--spotlight-x) var(--spotlight-y), rgba(99,102,241,0.13), transparent 50%)",
+            "radial-gradient(420px circle at var(--spotlight-x) var(--spotlight-y), rgb(var(--brand-primary) / 0.13), transparent 50%)",
         }}
       />
       <div className="relative z-10 h-full">{children}</div>

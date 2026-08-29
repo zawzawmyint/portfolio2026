@@ -13,10 +13,10 @@ export function Timeline({ items }: { items: TimelineItem[] }) {
       <div className="space-y-10">
         {items.map((item, index) => (
           <div className="relative grid gap-5 pl-8 md:grid-cols-[10rem_1fr] md:gap-8 md:pl-0 rtl:pl-0 rtl:pr-8 rtl:md:pr-0" key={`${item.title}-${index}`}>
-            <div className="skeuo-control absolute left-0 top-2 size-4 rounded-full bg-indigo-500 shadow-[0_0_22px_rgba(99,102,241,0.75)] md:left-[11.05rem] rtl:left-auto rtl:right-0 rtl:md:right-[11.05rem]" />
+            <div className="skeuo-control absolute left-0 top-2 size-4 rounded-full bg-brand shadow-[0_0_22px_rgb(var(--brand-primary)/0.65)] md:left-[11.05rem] rtl:left-auto rtl:right-0 rtl:md:right-[11.05rem]" />
             <Reveal className="md:sticky md:top-28 md:h-fit md:text-right rtl:md:text-left">
               {item.eyebrow && (
-                <p className="font-mono text-xs uppercase tracking-[0.2em] text-indigo-500 dark:text-indigo-300" dir="auto">
+                <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand" dir="auto">
                   {item.eyebrow}
                 </p>
               )}

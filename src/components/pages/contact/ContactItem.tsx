@@ -1,6 +1,5 @@
 import type { Contact } from "@/lib/types/definitions";
 import {
-  ArrowUpRight,
   Cake,
   FileText,
   Github,
@@ -10,6 +9,7 @@ import {
   Phone,
 } from "lucide-react";
 import Link from "next/link";
+import { EditorialArrow } from "@/components/ui/EditorialArrow";
 
 function getContactIcon(contact: Contact) {
   const className = "size-4";
@@ -32,19 +32,19 @@ const ContactItem = ({ contact }: { contact: Contact }) => {
       href={contact.linkto}
       target={external ? "_blank" : undefined}
       rel={external ? "noreferrer" : undefined}
-      className="skeuo-inset group flex min-h-14 items-center gap-4 rounded-2xl px-4 py-3 transition duration-300 hover:translate-x-1 hover:border-indigo-400/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rtl:hover:-translate-x-1"
+      className="skeuo-inset group/link flex min-h-14 min-w-0 items-center gap-3 overflow-hidden rounded-2xl px-3 py-3 transition duration-300 hover:translate-x-1 hover:border-brand/45 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand sm:gap-4 sm:px-4 rtl:hover:-translate-x-1"
     >
-      <span className="skeuo-control grid size-10 shrink-0 place-items-center rounded-xl bg-indigo-500/10 text-indigo-500 dark:text-indigo-300">
+      <span className="skeuo-control grid size-10 shrink-0 place-items-center rounded-xl bg-brand/10 text-brand">
         {getContactIcon(contact)}
       </span>
       <span
-        className="min-w-0 flex-1 break-words text-sm font-medium sm:text-base"
+        className="min-w-0 flex-1 break-all text-sm font-medium sm:break-words sm:text-base"
         dir={leftToRight ? "ltr" : undefined}
       >
         {contact.text}
       </span>
       {external && (
-        <ArrowUpRight className="size-4 shrink-0 text-muted-foreground transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 rtl:-scale-x-100 rtl:group-hover:-translate-x-0.5" />
+        <EditorialArrow className="size-4 text-muted-foreground" />
       )}
     </Link>
   );

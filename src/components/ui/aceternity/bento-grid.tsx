@@ -24,11 +24,11 @@ export function BentoGridItem({
   return (
     <div
       className={cn(
-        "skeuo-panel group relative overflow-hidden rounded-2xl p-6 transition duration-500 hover:-translate-y-1 hover:border-indigo-400/40 sm:p-8",
+        "skeuo-panel group relative overflow-hidden rounded-2xl p-6 transition duration-500 hover:-translate-y-1 hover:border-brand/40 sm:p-8",
         className
       )}
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(99,102,241,0.09),transparent_44%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgb(var(--brand-primary)/0.09),transparent_44%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
       <div className="relative z-10 h-full">{children}</div>
     </div>
   );

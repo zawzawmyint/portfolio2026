@@ -19,7 +19,7 @@ export default async function Page({
         title={dict.projects.mainTitleDesc.title}
         description={dict.projects.mainTitleDesc.desc}
         videoSrc="https://www.pexels.com/download/video/2909914/"
-        poster="/images/projectsImage/online-courses.png"
+        poster="/images/intro/cbjm.jpg"
         meta={[dict.projects.selectedBuild, dict.common.actions.myProjects, "2022 — 2026"]}
       />
       <BaseContainer>

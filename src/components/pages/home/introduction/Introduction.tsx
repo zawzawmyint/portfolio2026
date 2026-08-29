@@ -15,7 +15,7 @@ const Introduction = ({
   return (
     <section aria-labelledby="introduction-title" data-robot-guide="homeIntroduction">
       <Reveal>
-        <p className="mb-3 font-mono text-sm uppercase tracking-[0.28em] text-indigo-500 dark:text-indigo-300">
+        <p className="mb-3 font-mono text-sm uppercase tracking-[0.28em] text-brand">
           {dictionary.eyebrow}
         </p>
         <h2

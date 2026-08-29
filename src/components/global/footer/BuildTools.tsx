@@ -12,7 +12,7 @@ const BuildTools = ({ dictionary }: { dictionary: Dictionary["common"]["footer"]
       {builds.map((build, i) => (
         <div className="flex gap-1 text-xs" key={i + build.text}>
           <p>{build.text}</p>
-          <Link className="underline decoration-indigo-400/60 underline-offset-4" href={build.href} target="_blank" rel="noreferrer">
+          <Link className="underline decoration-brand/60 underline-offset-4" href={build.href} target="_blank" rel="noreferrer">
             {build.platform}
           </Link>
         </div>

@@ -24,7 +24,7 @@ export default async function Page({
         title={dict.home.mainTitleDesc.title}
         description={dict.home.mainTitleDesc.desc}
         videoSrc="https://www.pexels.com/download/video/855282/"
-        poster="/images/intro/Zack.dev.png"
+        poster="/images/ProfileImage.jpg"
         meta={[dict.common.footer.location, dict.about.sections.experiences, "Next.js · React · TypeScript"]}
       >
           <MovingBorder className="rounded-[calc(1rem-1px)] bg-foreground px-5 py-2.5 text-sm font-semibold text-background">

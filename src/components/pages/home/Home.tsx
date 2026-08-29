@@ -35,7 +35,7 @@ const Home = async ({
 
       <section className="grid gap-8 border-y border-border/70 py-12 lg:grid-cols-[0.68fr_1.32fr] lg:py-16">
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-indigo-500 dark:text-indigo-300">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-brand">
             02 · {editorial.currentFocus}
           </p>
         </Reveal>
@@ -65,7 +65,7 @@ const Home = async ({
         <div className="mb-10 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <Reveal>
             <div>
-              <p className="font-mono text-xs uppercase tracking-[0.24em] text-indigo-500 dark:text-indigo-300">
+              <p className="font-mono text-xs uppercase tracking-[0.24em] text-brand">
                 03 · {editorial.selectedWork}
               </p>
               <h2 className="mt-4 text-4xl font-semibold tracking-[-0.045em] sm:text-6xl">
@@ -74,7 +74,7 @@ const Home = async ({
             </div>
           </Reveal>
           <Link
-            className="group/link inline-flex min-h-11 items-center gap-2 font-semibold underline decoration-indigo-400/60 underline-offset-8 transition-colors hover:text-indigo-500 motion-reduce:transition-none"
+            className="group/link inline-flex min-h-11 items-center gap-2 font-semibold underline decoration-brand/60 underline-offset-8 transition-colors hover:text-brand motion-reduce:transition-none"
             href={`/${lang}/projects`}
           >
             {editorial.viewAll}
@@ -129,7 +129,7 @@ const Home = async ({
 
       <section>
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-indigo-500 dark:text-indigo-300">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-brand">
             04 · {editorial.capabilities}
           </p>
         </Reveal>
@@ -138,22 +138,22 @@ const Home = async ({
             {
               icon: Code2,
               title: dictionary.about.sections.frontend,
-              text: "React · Next.js · TypeScript · Nuxt · Vue",
+              text: editorial.frontendStack,
             },
             {
               icon: Layers3,
               title: dictionary.about.sections.backend,
-              text: "Strapi · Payload · PostgreSQL · Redis · AWS S3",
+              text: editorial.backendStack,
             },
             {
               icon: BriefcaseBusiness,
               title: editorial.delivery,
-              text: "Accessibility · i18n · Testing · SEO · Performance",
+              text: editorial.deliveryStack,
             },
           ].map(({ icon: Icon, title, text }, index) => (
             <Reveal key={title} delay={index * 0.07} className="bg-background">
               <div className="h-full p-7 sm:p-9">
-                <Icon className="size-5 text-indigo-500" />
+                <Icon className="size-5 text-brand" />
                 <h3 className="mt-12 text-2xl font-semibold">{title}</h3>
                 <p className="mt-3 text-sm leading-7 text-muted-foreground">{text}</p>
               </div>
@@ -164,7 +164,7 @@ const Home = async ({
 
       <section className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr]">
         <div>
-          <p className="font-mono text-xs uppercase tracking-[0.24em] text-indigo-500 dark:text-indigo-300">
+          <p className="font-mono text-xs uppercase tracking-[0.24em] text-brand">
             05 · {editorial.experience}
           </p>
           <h2 className="mt-4 text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">
@@ -189,7 +189,7 @@ const Home = async ({
           ))}
           <Link
             href={`/${lang}/about`}
-            className="group/link flex min-h-14 items-center justify-between font-semibold transition-colors hover:text-indigo-500 motion-reduce:transition-none"
+            className="group/link flex min-h-14 items-center justify-between font-semibold transition-colors hover:text-brand motion-reduce:transition-none"
           >
             {editorial.fullStory}
             <EditorialArrow className="size-4" />

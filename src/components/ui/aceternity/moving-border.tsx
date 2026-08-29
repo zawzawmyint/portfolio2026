@@ -18,7 +18,11 @@ export function MovingBorder({
     >
       <div
         aria-hidden="true"
-        className="absolute -inset-[150%] bg-[conic-gradient(from_90deg_at_50%_50%,transparent_0deg,transparent_250deg,rgba(99,102,241,0.72)_290deg,rgba(34,211,238,0.62)_325deg,transparent_360deg)] motion-safe:animate-aceternity-spin"
+        className="absolute -inset-[150%] motion-safe:animate-aceternity-spin"
+        style={{
+          backgroundImage:
+            "conic-gradient(from 90deg at 50% 50%, transparent 0deg, transparent 250deg, rgb(var(--brand-primary) / 0.72) 290deg, rgb(var(--brand-secondary) / 0.62) 325deg, transparent 360deg)",
+        }}
       />
       <div
         className={cn(

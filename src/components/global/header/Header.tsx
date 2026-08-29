@@ -5,14 +5,24 @@ import Logo from "@/components/generic/Logo";
 import { ModeToggle } from "../modetoggle/ModeToggle";
 import { MobileDrawer } from "./MobileDrawer";
 import { Navs } from "./Navs";
-import Socials from "./Socials";
 import LanguageSwitcher from "./LanguageSwitcher";
 import type { Dictionary } from "@/lib/dictionaries/types";
 import RobotFollowToggle from "../robot-companion/RobotFollowToggle";
+import { usePathname } from "next/navigation";
 
 const Header = ({ dictionary }: { dictionary: Dictionary["common"] }) => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(true);
   const lastScrollY = useRef(0);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const animationFrame = window.requestAnimationFrame(() => {
+      setIsExpanded(true);
+      lastScrollY.current = window.scrollY;
+    });
+
+    return () => window.cancelAnimationFrame(animationFrame);
+  }, [pathname]);
 
   useEffect(() => {
     const revealAtTop = 24;
@@ -26,13 +36,13 @@ const Header = ({ dictionary }: { dictionary: Dictionary["common"] }) => {
         document.documentElement.scrollHeight - (currentScrollY + window.innerHeight);
 
       if (currentScrollY <= revealAtTop || distanceToBottom <= 32) {
-        setIsVisible(true);
+        setIsExpanded(true);
         lastScrollY.current = currentScrollY;
       } else if (distance > directionThreshold && currentScrollY > hideAfter) {
-        setIsVisible(false);
+        setIsExpanded(false);
         lastScrollY.current = currentScrollY;
       } else if (distance < -directionThreshold) {
-        setIsVisible(true);
+        setIsExpanded(true);
         lastScrollY.current = currentScrollY;
       }
     };
@@ -44,25 +54,30 @@ const Header = ({ dictionary }: { dictionary: Dictionary["common"] }) => {
   }, []);
 
   return (
-    <header
-      className={`sticky left-0 top-0 z-50 transform-gpu px-3 py-3 transition-transform duration-300 motion-reduce:transition-none sm:px-6 ${
-        isVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
-      <div className="relative mx-auto grid min-h-14 max-w-7xl grid-cols-[1fr_auto] items-center gap-4 rounded-2xl border border-border/70 bg-background/80 px-4 py-2 shadow-[0_18px_60px_-38px_rgba(15,23,42,0.75)] backdrop-blur-2xl sm:grid-cols-[1fr_auto_1fr] sm:px-5">
+    <header className="sticky left-0 top-0 z-50 px-3 py-3 sm:px-6">
+      <div
+        className={`relative mx-auto grid min-h-14 max-w-7xl grid-cols-[1fr_auto] items-center gap-4 border border-border/70 bg-background/85 px-4 py-2 backdrop-blur-2xl transition-[max-width,border-radius,min-height,padding,box-shadow] duration-300 motion-reduce:transition-none sm:grid-cols-[auto_1fr_auto] ${
+          isExpanded
+            ? "rounded-2xl shadow-[0_18px_60px_-38px_rgba(15,23,42,0.75)] sm:px-5"
+            : "rounded-2xl shadow-[0_16px_45px_-28px_rgba(15,23,42,0.8)] sm:min-h-12 sm:max-w-4xl sm:rounded-full sm:px-3"
+        }`}
+      >
         <div className="flex min-w-0 items-center gap-4">
           <Logo />
-          <div className="hidden min-w-0 border-s border-border/70 ps-4 lg:block">
+          <div
+            className={`min-w-0 border-s border-border/70 ps-4 transition-opacity duration-200 motion-reduce:transition-none ${
+              isExpanded ? "hidden lg:block" : "hidden"
+            }`}
+          >
             <p className="truncate font-mono text-[0.62rem] uppercase tracking-[0.16em] text-muted-foreground">
               {dictionary.footer.location}
             </p>
           </div>
         </div>
-        <div className="hidden sm:block">
+        <div className="hidden justify-self-center sm:block">
           <Navs dictionary={dictionary.navigation} />
         </div>
         <div className="flex flex-wrap items-center justify-end gap-1">
-          <Socials className="hidden sm:flex" />
           <div className="hidden sm:block">
             <RobotFollowToggle dictionary={dictionary.robotControls} compact />
           </div>

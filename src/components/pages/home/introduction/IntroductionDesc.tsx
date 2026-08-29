@@ -20,7 +20,7 @@ const IntroductionDesc = ({
           href={"https://www.mhmarkets.com/"}
           target="_blank"
           rel="noreferrer"
-          className="font-medium text-foreground underline decoration-indigo-400 underline-offset-4"
+          className="font-medium text-foreground underline decoration-brand underline-offset-4"
         >
           MH Markets
         </Link>
@@ -31,12 +31,12 @@ const IntroductionDesc = ({
         <Link
           href={"https://github.com/zawzawmyint"}
           target="_blank"
-          className="font-medium text-foreground underline decoration-indigo-400 underline-offset-4"
+          className="font-medium text-foreground underline decoration-brand underline-offset-4"
         >
           GitHub
         </Link>{" "}
         {dictionary.closingMiddle}{" "}
-        <Link href={`/${lang}/contact`} className="font-medium text-foreground underline decoration-indigo-400 underline-offset-4">
+        <Link href={`/${lang}/contact`} className="font-medium text-foreground underline decoration-brand underline-offset-4">
           {dictionary.closingContact}
         </Link>{" "}
         {dictionary.closingAfter}

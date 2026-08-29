@@ -21,7 +21,7 @@ export default async function Page({
         title={dict.blogs.mainTitleDesc.title}
         description={dict.blogs.mainTitleDesc.desc}
         videoSrc="https://www.pexels.com/download/video/3476248/"
-        poster="/images/amazing.png"
+        poster="/images/pi2.jpg"
         meta={[dict.common.navigation.blogs, dict.common.actions.readMore, "Medium"]}
       />
       <BaseContainer>

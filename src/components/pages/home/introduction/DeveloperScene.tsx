@@ -48,7 +48,7 @@ export function DeveloperScene({ dictionary }: { dictionary: SceneDictionary }) 
     getServerReadySnapshot,
   );
   const [mobileActivated, setMobileActivated] = React.useState(false);
-  const [documentVisible, setDocumentVisible] = React.useState(true);
+  const [documentVisible, setDocumentVisible] = React.useState(false);
   const [shouldLoad, setShouldLoad] = React.useState(false);
   const [isVisible, setIsVisible] = React.useState(false);
   const [moduleReady, setModuleReady] = React.useState(false);
@@ -153,17 +153,13 @@ export function DeveloperScene({ dictionary }: { dictionary: SceneDictionary }) 
 
   React.useEffect(() => {
     const layer = motionLayerRef.current;
-    const supportsPointerFollow = window.matchMedia(
-      "(hover: hover) and (pointer: fine)",
-    ).matches;
-
     if (
       !layer ||
       !isLoaded ||
       !isVisible ||
       !documentVisible ||
       reduceMotion ||
-      !supportsPointerFollow
+      !hasFinePointer
     ) {
       pointerTargetRef.current = { x: 0, y: 0 };
       pointerPositionRef.current = { x: 0, y: 0 };
@@ -186,7 +182,7 @@ export function DeveloperScene({ dictionary }: { dictionary: SceneDictionary }) 
       window.cancelAnimationFrame(animationFrame);
       layer.style.transform = "";
     };
-  }, [documentVisible, isLoaded, isVisible, reduceMotion]);
+  }, [documentVisible, hasFinePointer, isLoaded, isVisible, reduceMotion]);
 
   const resetPointerTarget = () => {
     pointerTargetRef.current = { x: 0, y: 0 };
@@ -197,7 +193,7 @@ export function DeveloperScene({ dictionary }: { dictionary: SceneDictionary }) 
       event.pointerType !== "mouse" ||
       isDraggingRef.current ||
       reduceMotion ||
-      !window.matchMedia("(hover: hover) and (pointer: fine)").matches
+      !hasFinePointer
     ) {
       return;
     }
@@ -293,22 +289,22 @@ export function DeveloperScene({ dictionary }: { dictionary: SceneDictionary }) 
             setMobileActivated(true);
             setShouldLoad(true);
           }}
-          className="absolute left-1/2 top-1/2 z-20 inline-flex min-h-11 -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-full border border-white/20 bg-slate-950/80 px-5 py-3 text-sm font-semibold text-white shadow-2xl shadow-cyan-950/30 backdrop-blur-md transition-colors hover:bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
+          className="absolute left-1/2 top-1/2 z-20 inline-flex min-h-11 -translate-x-1/2 -translate-y-1/2 items-center gap-2 rounded-full border border-white/20 bg-slate-950/80 px-5 py-3 text-sm font-semibold text-white shadow-2xl shadow-teal-950/30 backdrop-blur-md transition-colors hover:bg-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950"
           aria-label={dictionary.view3d}
         >
-          <Box className="size-4 text-cyan-300" aria-hidden="true" />
+          <Box className="size-4 text-teal-300" aria-hidden="true" />
           {dictionary.view3d}
         </button>
       )}
 
       <div className="pointer-events-none absolute inset-x-4 top-4 z-20 flex items-center justify-between gap-3">
         <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-slate-950/55 px-3 py-1.5 text-[0.68rem] font-medium uppercase tracking-[0.16em] text-slate-100 backdrop-blur-md">
-          <Box className="size-3.5 text-cyan-300" aria-hidden="true" />
+          <Box className="size-3.5 text-teal-300" aria-hidden="true" />
           {dictionary.badge}
         </span>
         {isLoaded && (
           <span className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-slate-950/55 px-3 py-1.5 text-xs text-slate-200 backdrop-blur-md">
-            <Rotate3D className="size-3.5 text-indigo-300" aria-hidden="true" />
+            <Rotate3D className="size-3.5 text-amber-200" aria-hidden="true" />
             {dictionary.hint}
           </span>
         )}
@@ -322,7 +318,7 @@ export function DeveloperScene({ dictionary }: { dictionary: SceneDictionary }) 
           </div>
           <div className="h-1.5 overflow-hidden rounded-full bg-white/15">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-indigo-400 to-cyan-300 transition-[width] duration-300"
+              className="h-full rounded-full bg-gradient-to-r from-brand to-brass transition-[width] duration-300"
               style={{ width: `${Math.max(6, loadingPercent)}%` }}
             />
           </div>

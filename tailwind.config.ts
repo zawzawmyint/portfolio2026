@@ -15,6 +15,8 @@ export default {
         mono: ["var(--font-geist-mono)", "Courier New", "monospace"],
       },
       colors: {
+        brand: "rgb(var(--brand-primary) / <alpha-value>)",
+        brass: "rgb(var(--brand-secondary) / <alpha-value>)",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

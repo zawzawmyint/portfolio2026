@@ -12,7 +12,7 @@ const Footer = ({ dictionary }: { dictionary: Dictionary["common"] }) => {
       <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-border/70 bg-background/75 p-7 shadow-[0_30px_100px_-55px_rgba(15,23,42,0.65)] backdrop-blur-xl sm:p-10 lg:p-14">
         <div className="grid gap-12 lg:grid-cols-[1.35fr_0.65fr] lg:items-end">
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.24em] text-indigo-500 dark:text-indigo-300">
+            <p className="font-mono text-xs uppercase tracking-[0.24em] text-brand">
               {dictionary.navigation.contact} · 05
             </p>
             <h2 className="mt-5 max-w-4xl text-balance text-4xl font-semibold leading-[0.98] tracking-[-0.05em] sm:text-6xl lg:text-7xl">
@@ -26,7 +26,7 @@ const Footer = ({ dictionary }: { dictionary: Dictionary["common"] }) => {
             <div className="flex lg:justify-end">
               <Logo />
             </div>
-            <p className="font-mono text-xs uppercase tracking-[0.18em] text-indigo-500 dark:text-indigo-300">
+            <p className="font-mono text-xs uppercase tracking-[0.18em] text-brand">
               {dictionary.footer.location}
             </p>
             <Socials className="lg:justify-end" />

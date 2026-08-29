@@ -17,7 +17,7 @@ const ExperienceCard = ({ experience, fullTimeLabel }: { experience: WorkExperie
             </h3>
             <p className="mt-2 text-sm font-medium text-muted-foreground">
               <Link
-                className="underline decoration-indigo-400/60 underline-offset-4 hover:text-foreground"
+                className="underline decoration-brand/60 underline-offset-4 hover:text-foreground"
                 href={experience.company_link}
                 target="_blank"
                 rel="noreferrer"
@@ -38,7 +38,7 @@ const ExperienceCard = ({ experience, fullTimeLabel }: { experience: WorkExperie
         </div>
 
         <div className="space-y-4">
-          <h4 className="font-mono text-sm uppercase tracking-[0.18em] text-indigo-500 dark:text-indigo-300">
+          <h4 className="font-mono text-sm uppercase tracking-[0.18em] text-brand">
             {experience.project}
           </h4>
           <ScrollArea className="h-64 w-full pr-4">
@@ -48,7 +48,7 @@ const ExperienceCard = ({ experience, fullTimeLabel }: { experience: WorkExperie
                   key={`${task}-${index}`}
                   className="flex gap-3 text-sm leading-6 text-muted-foreground"
                 >
-                  <CircleCheck className="mt-1 size-4 shrink-0 text-cyan-500" />
+                  <CircleCheck className="mt-1 size-4 shrink-0 text-brand" />
                   <span>{task}</span>
                 </li>
               ))}

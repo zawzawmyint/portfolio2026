@@ -12,12 +12,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, rgb(99 102 241), rgb(6 182 212));
+  background: linear-gradient(to bottom, rgb(var(--brand-primary)), rgb(var(--brand-secondary)));
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, rgb(79 70 229), rgb(8 145 178));
+  background: linear-gradient(to bottom, rgb(var(--brand-primary) / 0.86), rgb(var(--brand-secondary) / 0.86));
 }
 
 ::-webkit-scrollbar-track {
@@ -28,7 +28,7 @@ body {
 /* For Firefox */
 html {
   scroll-behavior: smooth;
-  scrollbar-color: rgb(99 102 241) hsl(var(--background));
+  scrollbar-color: rgb(var(--brand-primary)) hsl(var(--background));
   scrollbar-width: thin; /* Can be 'auto', 'thin', or 'none' */
 }
 
@@ -52,15 +52,17 @@ html {
     --destructive-foreground: 0 0% 98%;
     --border: 36 12% 74%;
     --input: 36 12% 78%;
-    --ring: 239 84% 67%;
+    --ring: 176 79% 26%;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.875rem;
-    --glow-primary: 99 102 241;
-    --glow-secondary: 6 182 212;
+    --brand-primary: 15 118 110;
+    --brand-secondary: 184 135 70;
+    --glow-primary: 15 118 110;
+    --glow-secondary: 184 135 70;
     --skeuo-surface: 237 233 223;
     --skeuo-high: 255 253 247;
     --skeuo-low: 190 185 174;
@@ -86,14 +88,16 @@ html {
     --destructive-foreground: 0 0% 98%;
     --border: 217 15% 25%;
     --input: 217 15% 22%;
-    --ring: 239 84% 70%;
+    --ring: 172 66% 50%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --glow-primary: 129 140 248;
-    --glow-secondary: 34 211 238;
+    --brand-primary: 45 212 191;
+    --brand-secondary: 217 175 105;
+    --glow-primary: 45 212 191;
+    --glow-secondary: 217 175 105;
     --skeuo-surface: 20 26 36;
     --skeuo-high: 48 57 72;
     --skeuo-low: 3 6 11;
@@ -115,7 +119,7 @@ html {
     background-attachment: fixed;
   }
   ::selection {
-    @apply bg-indigo-500/30 text-foreground;
+    @apply bg-brand/30 text-foreground;
   }
 }
 

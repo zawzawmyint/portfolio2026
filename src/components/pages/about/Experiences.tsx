@@ -14,7 +14,7 @@ const Experiences = ({ experiences, dictionary }: ExperiencesProps) => {
   return (
     <section className="space-y-10" data-robot-guide="aboutExperience">
       <Reveal>
-        <p className="mb-3 font-mono text-sm uppercase tracking-[0.28em] text-indigo-500 dark:text-indigo-300">
+        <p className="mb-3 font-mono text-sm uppercase tracking-[0.28em] text-brand">
           {dictionary.career}
         </p>
         <h2 className="text-balance text-4xl font-semibold leading-tight tracking-[-0.025em] sm:text-5xl">

@@ -22,7 +22,7 @@ export default async function Page({
         title={dict.about.mainTitleDesc.title}
         description={dict.about.mainTitleDesc.desc}
         videoSrc="https://www.pexels.com/download/video/6864603/"
-        poster="/images/ProfileImage.jpg"
+        poster="/images/pi1.jpg"
         meta={[dict.common.footer.location, dict.about.sections.career]}
       >
           <Button asChild className="bg-white text-slate-950 hover:bg-white/90">
