@@ -1,0 +1,138 @@
+html[data-style="nineties"] {
+  --background: 180 100% 25%;
+  --foreground: 0 0% 0%;
+  --card: 0 0% 75%;
+  --card-foreground: 0 0% 0%;
+  --popover: 0 0% 75%;
+  --popover-foreground: 0 0% 0%;
+  --primary: 0 0% 75%;
+  --primary-foreground: 0 0% 0%;
+  --secondary: 0 0% 75%;
+  --secondary-foreground: 0 0% 0%;
+  --muted: 0 0% 75%;
+  --muted-foreground: 0 0% 0%;
+  --accent: 240 100% 25%;
+  --accent-foreground: 0 0% 100%;
+  --border: 0 0% 25%;
+  --input: 0 0% 25%;
+  --ring: 240 100% 25%;
+  --radius: 0;
+  --brand-primary: 0 0 128;
+  --brand-secondary: 0 128 128;
+  --glow-primary: 0 0 128;
+  --glow-secondary: 0 128 128;
+}
+
+html.dark[data-style="nineties"] {
+  --background: 180 100% 12%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 16%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 16%;
+  --popover-foreground: 0 0% 100%;
+  --muted: 0 0% 16%;
+  --muted-foreground: 0 0% 100%;
+  --secondary: 0 0% 16%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 180 100% 50%;
+  --accent-foreground: 0 0% 0%;
+  --border: 0 0% 100%;
+  --brand-primary: 0 255 255;
+  --brand-secondary: 255 255 0;
+  --glow-primary: 0 255 255;
+  --glow-secondary: 255 255 0;
+}
+
+html[data-style="nineties"] body {
+  background-color: hsl(var(--background));
+  background-image: none;
+  color: hsl(var(--foreground));
+  font-family: Tahoma, "Microsoft Sans Serif", sans-serif;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+html[data-style="nineties"] .font-mono {
+  font-family: Tahoma, "Microsoft Sans Serif", sans-serif;
+  letter-spacing: 0.04em;
+}
+
+html[data-style="nineties"] h1,
+html[data-style="nineties"] h2,
+html[data-style="nineties"] h3 {
+  letter-spacing: 0;
+  font-weight: 700;
+}
+
+html[data-style="nineties"] .style-shell,
+html[data-style="nineties"] .style-card,
+html[data-style="nineties"] .skeuo-panel,
+html[data-style="nineties"] .skeuo-screen {
+  border-radius: 0;
+  border: 2px solid #404040;
+  border-color: #ffffff #404040 #404040 #ffffff;
+  background-color: #c0c0c0;
+  background-image: none;
+  color: #000000;
+  box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #808080;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+html[data-style="nineties"] .skeuo-inset {
+  border-radius: 0;
+  border: 2px solid #ffffff;
+  border-color: #404040 #ffffff #ffffff #404040;
+  background-color: #c0c0c0;
+  background-image: none;
+  box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #dfdfdf;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+html[data-style="nineties"] .skeuo-control {
+  border-radius: 0;
+  border: 2px solid #404040;
+  border-color: #ffffff #404040 #404040 #ffffff;
+  background-color: #c0c0c0;
+  background-image: none;
+  color: #000000;
+  box-shadow: inset 1px 1px 0 #dfdfdf, inset -1px -1px 0 #808080;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  transition: none;
+}
+
+html[data-style="nineties"] .skeuo-control:hover {
+  transform: none;
+}
+
+html[data-style="nineties"] .skeuo-control:active,
+html[data-style="nineties"] .skeuo-control[data-state="open"] {
+  border-color: #404040 #ffffff #ffffff #404040;
+  box-shadow: inset 1px 1px 0 #808080;
+  transform: none;
+}
+
+html.dark[data-style="nineties"] .style-shell,
+html.dark[data-style="nineties"] .style-card,
+html.dark[data-style="nineties"] .skeuo-panel,
+html.dark[data-style="nineties"] .skeuo-screen,
+html.dark[data-style="nineties"] .skeuo-inset {
+  background-color: #202020;
+  color: #ffffff;
+  border-color: #808080 #000000 #000000 #808080;
+  box-shadow: inset 1px 1px 0 #404040, inset -1px -1px 0 #000000;
+}
+
+html.dark[data-style="nineties"] .skeuo-control {
+  background-color: #c0c0c0;
+  color: #000000;
+}
+
+html[data-style="nineties"] .style-shell > .pointer-events-none,
+html[data-style="nineties"] footer > .absolute,
+html[data-style="nineties"] .aceternity-grid {
+  background-image: none;
+  opacity: 0;
+}

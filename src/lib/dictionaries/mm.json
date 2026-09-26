@@ -25,7 +25,8 @@
       "reducedMotion": "လှုပ်ရှားမှုလျှော့ချထားသောကြောင့် Robot ကို ရပ်ထားသည်"
     },
     "actions": { "myProjects": "ကျွန်ုပ်၏ ပရောဂျက်များ", "readMore": "ဆက်ဖတ်ရန်" },
-    "controls": { "selectLanguage": "ဘာသာစကား ရွေးရန်", "toggleTheme": "အလင်းနှင့် အမှောင်မုဒ် ပြောင်းရန်" },
+    "controls": { "selectLanguage": "ဘာသာစကား ရွေးရန်", "selectStyle": "ဒီဇိုင်းစတိုင် ရွေးရန်", "toggleTheme": "အလင်းနှင့် အမှောင်မုဒ် ပြောင်းရန်" },
+    "styles": { "current": "စကျူ", "neo": "နီယို", "nineties": "90s" },
     "languages": { "english": "အင်္ဂလိပ်", "thai": "ထိုင်း", "myanmar": "မြန်မာ", "japanese": "ဂျပန်", "arabic": "အာရဗီ" },
     "footer": { "tagline": "ယုံကြည်စိတ်ချရပြီး အသုံးပြုရလွယ်ကူသော digital product များကို စနစ်တကျ တည်ဆောက်သည့် Software Developer ဖြစ်ပါသည်။", "location": "ဒူဘိုင်း၊ UAE တွင် နေထိုင်သည်", "rights": "မူပိုင်ခွင့်အားလုံး ရယူထားသည်။", "builtWith": "တည်ဆောက်ထားသည်", "hostedWith": "လွှင့်တင်ထားသည်", "sourceAt": "Source code ကို" }
   },

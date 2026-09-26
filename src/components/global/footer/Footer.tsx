@@ -9,7 +9,7 @@ const Footer = ({ dictionary }: { dictionary: Dictionary["common"] }) => {
   return (
     <footer className="relative mt-20 overflow-hidden border-t border-border/60 px-4 py-8 sm:mt-32 sm:px-6 sm:py-12">
       <div className="absolute inset-0 opacity-35 [background-image:linear-gradient(to_right,hsl(var(--border)/0.35)_1px,transparent_1px)] [background-size:5rem_100%] [mask-image:linear-gradient(to_bottom,black,transparent)]" />
-      <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-border/70 bg-background/75 p-7 shadow-[0_30px_100px_-55px_rgba(15,23,42,0.65)] backdrop-blur-xl sm:p-10 lg:p-14">
+      <div className="style-shell relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-border/70 bg-background/75 p-7 shadow-[0_30px_100px_-55px_rgba(15,23,42,0.65)] backdrop-blur-xl sm:p-10 lg:p-14">
         <div className="grid gap-12 lg:grid-cols-[1.35fr_0.65fr] lg:items-end">
           <div>
             <p className="font-mono text-xs uppercase tracking-[0.24em] text-brand">

@@ -6,6 +6,7 @@ import { ModeToggle } from "../modetoggle/ModeToggle";
 import { MobileDrawer } from "./MobileDrawer";
 import { Navs } from "./Navs";
 import LanguageSwitcher from "./LanguageSwitcher";
+import StyleSwitcher from "./StyleSwitcher";
 import type { Dictionary } from "@/lib/dictionaries/types";
 import RobotFollowToggle from "../robot-companion/RobotFollowToggle";
 import { usePathname } from "next/navigation";
@@ -56,7 +57,7 @@ const Header = ({ dictionary }: { dictionary: Dictionary["common"] }) => {
   return (
     <header className="sticky left-0 top-0 z-50 px-3 py-3 sm:px-6">
       <div
-        className={`relative mx-auto grid min-h-14 max-w-7xl grid-cols-[1fr_auto] items-center gap-4 border border-border/70 bg-background/85 px-4 py-2 backdrop-blur-2xl transition-[max-width,border-radius,min-height,padding,box-shadow] duration-300 motion-reduce:transition-none sm:grid-cols-[auto_1fr_auto] ${
+        className={`style-shell relative mx-auto grid min-h-14 max-w-7xl grid-cols-[1fr_auto] items-center gap-4 border border-border/70 bg-background/85 px-4 py-2 backdrop-blur-2xl transition-[max-width,border-radius,min-height,padding,box-shadow] duration-300 motion-reduce:transition-none sm:grid-cols-[auto_1fr_auto] ${
           isExpanded
             ? "rounded-2xl shadow-[0_18px_60px_-38px_rgba(15,23,42,0.75)] sm:px-5"
             : "rounded-2xl shadow-[0_16px_45px_-28px_rgba(15,23,42,0.8)] sm:min-h-12 sm:max-w-4xl sm:rounded-full sm:px-3"
@@ -80,6 +81,9 @@ const Header = ({ dictionary }: { dictionary: Dictionary["common"] }) => {
         <div className="flex flex-wrap items-center justify-end gap-1">
           <div className="hidden sm:block">
             <RobotFollowToggle dictionary={dictionary.robotControls} compact />
+          </div>
+          <div className="hidden sm:block">
+            <StyleSwitcher controls={dictionary.controls} styles={dictionary.styles} />
           </div>
           <LanguageSwitcher controls={dictionary.controls} languages={dictionary.languages} />
           <ModeToggle label={dictionary.controls.toggleTheme} />

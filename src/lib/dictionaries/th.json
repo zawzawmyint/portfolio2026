@@ -25,7 +25,8 @@
       "reducedMotion": "หุ่นยนต์จอดอยู่กับที่เนื่องจากเปิดการลดการเคลื่อนไหว"
     },
     "actions": { "myProjects": "โปรเจกต์ของฉัน", "readMore": "อ่านเพิ่มเติม" },
-    "controls": { "selectLanguage": "เลือกภาษา", "toggleTheme": "สลับโหมดสว่างและมืด" },
+    "controls": { "selectLanguage": "เลือกภาษา", "selectStyle": "เลือกสไตล์การออกแบบ", "toggleTheme": "สลับโหมดสว่างและมืด" },
+    "styles": { "current": "สกีโว", "neo": "นีโอ", "nineties": "90s" },
     "languages": { "english": "อังกฤษ", "thai": "ไทย", "myanmar": "เมียนมา", "japanese": "ญี่ปุ่น", "arabic": "อาหรับ" },
     "footer": { "tagline": "Software Developer ที่สร้างผลิตภัณฑ์ดิจิทัลให้เชื่อถือได้ เข้าถึงง่าย และใส่ใจในรายละเอียด", "location": "อาศัยอยู่ในดูไบ สหรัฐอาหรับเอมิเรตส์", "rights": "สงวนลิขสิทธิ์", "builtWith": "สร้างด้วย", "hostedWith": "โฮสต์ด้วย", "sourceAt": "ซอร์สโค้ดบน" }
   },

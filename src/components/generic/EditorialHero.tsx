@@ -106,7 +106,7 @@ export default function EditorialHero({
     >
       <div
         className={cn(
-          "relative grid overflow-hidden rounded-[1.75rem] border border-border/70 bg-background/80 shadow-[0_30px_100px_-55px_rgba(15,23,42,0.7)] lg:items-stretch",
+          "style-shell relative grid overflow-hidden rounded-[1.75rem] border border-border/70 bg-background/80 shadow-[0_30px_100px_-55px_rgba(15,23,42,0.7)] lg:items-stretch",
           layout.shell,
         )}
       >

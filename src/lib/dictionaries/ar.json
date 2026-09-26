@@ -25,7 +25,8 @@
       "reducedMotion": "الروبوت مثبت لأن تقليل الحركة مفعّل"
     },
     "actions": { "myProjects": "مشاريعي", "readMore": "اقرأ المزيد" },
-    "controls": { "selectLanguage": "اختر اللغة", "toggleTheme": "التبديل بين الوضع الفاتح والداكن" },
+    "controls": { "selectLanguage": "اختر اللغة", "selectStyle": "اختر نمط التصميم", "toggleTheme": "التبديل بين الوضع الفاتح والداكن" },
+    "styles": { "current": "سكيو", "neo": "نيو", "nineties": "90s" },
     "languages": { "english": "الإنجليزية", "thai": "التايلاندية", "myanmar": "البورمية", "japanese": "اليابانية", "arabic": "العربية" },
     "footer": { "tagline": "مطور برمجيات يبني منتجات رقمية موثوقة وسهلة الوصول ومصممة بعناية.", "location": "مقيم في دبي، الإمارات العربية المتحدة", "rights": "جميع الحقوق محفوظة.", "builtWith": "تم البناء باستخدام", "hostedWith": "الاستضافة عبر", "sourceAt": "الشيفرة المصدرية على" }
   },
