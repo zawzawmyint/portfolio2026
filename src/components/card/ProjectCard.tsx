@@ -22,7 +22,7 @@ const ProjectCard = ({
 
   return (
     <Reveal>
-      <article className="group overflow-hidden rounded-[1.75rem] border border-border/70 bg-background/75 p-3 shadow-[0_24px_70px_-48px_rgba(15,23,42,0.75)]">
+      <article className="style-card group overflow-hidden rounded-[1.75rem] border border-border/70 bg-background/75 p-3 shadow-[0_24px_70px_-48px_rgba(15,23,42,0.75)]">
         <div className={cn("grid gap-4 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch", isReversed && "lg:grid-cols-[0.85fr_1.15fr]")}>
           <div className={cn("relative min-h-[19rem] overflow-hidden rounded-[1.25rem] bg-muted sm:min-h-[25rem]", isReversed && "lg:order-2")}>
             <Image

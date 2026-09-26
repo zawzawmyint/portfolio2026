@@ -18,6 +18,7 @@ import {
 import type { Dictionary } from "@/lib/dictionaries/types";
 import { ModeToggle } from "../modetoggle/ModeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
+import StyleSwitcher from "./StyleSwitcher";
 import { Navs } from "./Navs";
 import Socials from "./Socials";
 
@@ -33,7 +34,7 @@ export function MobileDrawer({ dictionary }: { dictionary: Dictionary["common"] 
         </Button>
       </DrawerTrigger>
 
-      <DrawerContent className="h-[min(92dvh,52rem)] overflow-hidden rounded-t-[2rem] border-border/70 bg-background/95 p-0 shadow-[0_-30px_90px_-45px_rgba(15,23,42,0.8)] backdrop-blur-2xl">
+      <DrawerContent className="style-shell h-[min(92dvh,52rem)] overflow-hidden rounded-t-[2rem] border-border/70 bg-background/95 p-0 shadow-[0_-30px_90px_-45px_rgba(15,23,42,0.8)] backdrop-blur-2xl">
         <div className="pointer-events-none absolute inset-0 opacity-35 [background-image:linear-gradient(to_right,hsl(var(--border)/0.32)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.24)_1px,transparent_1px)] [background-size:3.5rem_3.5rem] [mask-image:linear-gradient(to_bottom,black,transparent_78%)]" />
 
         <div className="relative z-10 flex min-h-0 flex-1 flex-col overflow-y-auto px-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-2">
@@ -83,7 +84,8 @@ export function MobileDrawer({ dictionary }: { dictionary: Dictionary["common"] 
 
             <div className="mt-4 flex items-center justify-between gap-3 border-t border-border/70 pt-4">
               <Socials />
-              <div className="flex items-center gap-2">
+              <div className="flex flex-wrap items-center justify-end gap-2">
+                <StyleSwitcher controls={dictionary.controls} styles={dictionary.styles} />
                 <LanguageSwitcher
                   controls={dictionary.controls}
                   languages={dictionary.languages}

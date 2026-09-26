@@ -1,5 +1,7 @@
 import ReactScrollToTop from "@/components/global/react-scroll-to-top/ReactScrollToTop";
+import { DesignStyleBoot } from "@/components/theme/DesignStyleBoot";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { designStyleBootScript } from "@/lib/styles/registry";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -37,6 +39,8 @@ export default async function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased w-full min-h-screen`}
       >
+        <script dangerouslySetInnerHTML={{ __html: designStyleBootScript }} />
+        <DesignStyleBoot />
         {/*language detected depend on user location */}
         <LocaleDetector />
         <ThemeProvider

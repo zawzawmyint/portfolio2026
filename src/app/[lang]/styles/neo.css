@@ -1,0 +1,107 @@
+html[data-style="neo"] {
+  --background: 54 100% 96%;
+  --foreground: 0 0% 7%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 7%;
+  --primary: 0 0% 7%;
+  --primary-foreground: 54 100% 96%;
+  --secondary: 54 100% 88%;
+  --secondary-foreground: 0 0% 7%;
+  --muted: 54 45% 90%;
+  --muted-foreground: 0 0% 28%;
+  --accent: 48 100% 62%;
+  --accent-foreground: 0 0% 7%;
+  --border: 0 0% 7%;
+  --input: 0 0% 7%;
+  --ring: 0 0% 7%;
+  --radius: 0.7rem;
+  --brand-primary: 255 90 31;
+  --brand-secondary: 255 214 10;
+  --glow-primary: 255 90 31;
+  --glow-secondary: 255 214 10;
+  --style-shadow-color: #111111;
+  --style-shadow: 4px 4px 0 var(--style-shadow-color);
+}
+
+html.dark[data-style="neo"] {
+  --background: 0 0% 7%;
+  --foreground: 54 100% 96%;
+  --card: 0 0% 12%;
+  --card-foreground: 54 100% 96%;
+  --popover: 0 0% 10%;
+  --popover-foreground: 54 100% 96%;
+  --primary: 48 100% 62%;
+  --primary-foreground: 0 0% 7%;
+  --secondary: 0 0% 16%;
+  --secondary-foreground: 54 100% 96%;
+  --muted: 0 0% 16%;
+  --muted-foreground: 48 30% 78%;
+  --accent: 48 90% 46%;
+  --accent-foreground: 0 0% 7%;
+  --border: 54 100% 96%;
+  --input: 54 100% 96%;
+  --ring: 48 100% 62%;
+  --brand-primary: 255 214 10;
+  --brand-secondary: 255 90 31;
+  --glow-primary: 255 214 10;
+  --glow-secondary: 255 90 31;
+  --style-shadow-color: #ffe14a;
+}
+
+html[dir="rtl"][data-style="neo"] {
+  --style-shadow: -4px 4px 0 var(--style-shadow-color);
+}
+
+html[data-style="neo"] body {
+  background-image: none;
+}
+
+html[data-style="neo"] .style-shell,
+html[data-style="neo"] .style-card,
+html[data-style="neo"] .skeuo-panel,
+html[data-style="neo"] .skeuo-inset,
+html[data-style="neo"] .skeuo-screen {
+  border: 3px solid hsl(var(--border));
+  background-image: none;
+  box-shadow: var(--style-shadow);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+html[data-style="neo"] .style-shell,
+html[data-style="neo"] .style-card,
+html[data-style="neo"] .skeuo-panel {
+  border-radius: 0.75rem;
+  background-color: hsl(var(--card));
+}
+
+html[data-style="neo"] .skeuo-control {
+  border: 3px solid hsl(var(--border));
+  background-image: none;
+  box-shadow: var(--style-shadow);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+html[data-style="neo"] .skeuo-control:hover {
+  transform: translate(-1px, -1px);
+}
+
+html[dir="rtl"][data-style="neo"] .skeuo-control:hover {
+  transform: translate(1px, -1px);
+}
+
+html[data-style="neo"] .skeuo-control:active,
+html[data-style="neo"] .skeuo-control[data-state="open"] {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+html[dir="rtl"][data-style="neo"] .skeuo-control:active,
+html[dir="rtl"][data-style="neo"] .skeuo-control[data-state="open"] {
+  transform: translate(-4px, 4px);
+  box-shadow: none;
+}

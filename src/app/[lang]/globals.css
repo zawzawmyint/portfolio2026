@@ -1,3 +1,6 @@
+@import "./styles/neo.css";
+@import "./styles/nineties.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

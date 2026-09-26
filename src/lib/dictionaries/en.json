@@ -35,7 +35,8 @@
       "reducedMotion": "Robot is docked because reduced motion is enabled"
     },
     "actions": { "myProjects": "My Projects", "readMore": "Read more" },
-    "controls": { "selectLanguage": "Select language", "toggleTheme": "Toggle between light and dark mode" },
+    "controls": { "selectLanguage": "Select language", "selectStyle": "Select design style", "toggleTheme": "Toggle between light and dark mode" },
+    "styles": { "current": "Skeuo", "neo": "Neo", "nineties": "90s" },
     "languages": { "english": "English", "thai": "Thai", "myanmar": "Myanmar", "japanese": "Japanese", "arabic": "Arabic" },
     "footer": { "tagline": "Software Developer building reliable, accessible, and thoughtfully crafted digital products.", "location": "Based in Dubai, UAE", "rights": "All rights reserved.", "builtWith": "Built with", "hostedWith": "Hosted with", "sourceAt": "Source code on" }
   },

@@ -24,10 +24,10 @@ const subscribe = (onChange: () => void) => {
   };
 };
 
-const getSnapshot = () => window.localStorage.getItem(STORAGE_KEY) !== "false";
+const getSnapshot = () => window.localStorage.getItem(STORAGE_KEY) === "true";
 
 export const useRobotFollowing = () =>
-  React.useSyncExternalStore(subscribe, getSnapshot, () => true);
+  React.useSyncExternalStore(subscribe, getSnapshot, () => false);
 
 export const useHasFinePointer = () =>
   React.useSyncExternalStore(

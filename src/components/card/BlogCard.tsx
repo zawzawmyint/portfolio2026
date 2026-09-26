@@ -23,7 +23,7 @@ const BlogCard = ({
 }) => {
   return (
     <Reveal>
-      <article className={cn("group grid overflow-hidden border-b border-border/70 py-6", featured ? "gap-6 rounded-[1.75rem] border border-border/70 bg-background/70 p-3 lg:grid-cols-[1.2fr_0.8fr] lg:p-3" : "gap-5 sm:grid-cols-[11rem_1fr_auto] sm:items-center")}>
+      <article className={cn("group grid overflow-hidden border-b border-border/70 py-6", featured ? "style-card gap-6 rounded-[1.75rem] border border-border/70 bg-background/70 p-3 lg:grid-cols-[1.2fr_0.8fr] lg:p-3" : "gap-5 sm:grid-cols-[11rem_1fr_auto] sm:items-center")}>
         <Link
           href={blog.link}
           target="_blank"
